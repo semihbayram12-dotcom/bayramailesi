@@ -1,0 +1,3997 @@
+{
+  "version": "31.4.2",
+  "pages": [
+    {
+      "id": "a0V-K8pLvq0KjbDelzxq",
+      "name": "Sayfa -1",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-1",
+          "target": "AqyniHqVunz7Ddo_49Cv-3"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-1",
+          "target": "AqyniHqVunz7Ddo_49Cv-5"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-1",
+          "type": "node",
+          "parent": "1",
+          "label": "NAHMET"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-2",
+          "target": "AqyniHqVunz7Ddo_49Cv-7"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-2",
+          "type": "node",
+          "parent": "1",
+          "label": "HÜSEYİN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-3",
+          "target": "AqyniHqVunz7Ddo_49Cv-17"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-3",
+          "type": "node",
+          "parent": "1",
+          "label": "KELEŞ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-10",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-5",
+          "target": "AqyniHqVunz7Ddo_49Cv-9"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-5",
+          "target": "AqyniHqVunz7Ddo_49Cv-11"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-5",
+          "target": "AqyniHqVunz7Ddo_49Cv-13"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-5",
+          "target": "AqyniHqVunz7Ddo_49Cv-15"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-5",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-41",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-7",
+          "target": "AqyniHqVunz7Ddo_49Cv-40"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-7",
+          "type": "node",
+          "parent": "1",
+          "label": "ŞUMAN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-134",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-9",
+          "target": "AqyniHqVunz7Ddo_49Cv-133"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-136",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-9",
+          "target": "AqyniHqVunz7Ddo_49Cv-135"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-138",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-9",
+          "target": "AqyniHqVunz7Ddo_49Cv-137"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-9",
+          "type": "node",
+          "parent": "1",
+          "label": "SADİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-210",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-11",
+          "target": "AqyniHqVunz7Ddo_49Cv-209"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-212",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-11",
+          "target": "AqyniHqVunz7Ddo_49Cv-211"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-214",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-11",
+          "target": "AqyniHqVunz7Ddo_49Cv-213"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-216",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-11",
+          "target": "AqyniHqVunz7Ddo_49Cv-215"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-218",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-11",
+          "target": "AqyniHqVunz7Ddo_49Cv-217"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-220",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-11",
+          "target": "AqyniHqVunz7Ddo_49Cv-219"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-11",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-92",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-13",
+          "target": "AqyniHqVunz7Ddo_49Cv-91"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-13",
+          "type": "node",
+          "parent": "1",
+          "label": "SEYDİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-104",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-15",
+          "target": "AqyniHqVunz7Ddo_49Cv-103"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-15",
+          "type": "node",
+          "parent": "1",
+          "label": "ZEYNEL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-17",
+          "target": "AqyniHqVunz7Ddo_49Cv-19"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-17",
+          "target": "AqyniHqVunz7Ddo_49Cv-21"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-17",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖMER"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-24",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-19",
+          "target": "AqyniHqVunz7Ddo_49Cv-23"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-19",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-35",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-21",
+          "target": "AqyniHqVunz7Ddo_49Cv-34"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-21",
+          "type": "node",
+          "parent": "1",
+          "label": "İSMAİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-23",
+          "target": "AqyniHqVunz7Ddo_49Cv-25"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-23",
+          "type": "node",
+          "parent": "1",
+          "label": "KAMİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-28",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-25",
+          "target": "AqyniHqVunz7Ddo_49Cv-27"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-25",
+          "target": "AqyniHqVunz7Ddo_49Cv-29"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-25",
+          "target": "AqyniHqVunz7Ddo_49Cv-32"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-25",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET DURSUN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-27",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-29",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-32",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖMER FARUK"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-37",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-34",
+          "target": "AqyniHqVunz7Ddo_49Cv-36"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-34",
+          "type": "node",
+          "parent": "1",
+          "label": "HASAN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-36",
+          "target": "AqyniHqVunz7Ddo_49Cv-38"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-36",
+          "target": "WebRWkfOKWYtirOi1o-t-1"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-36",
+          "type": "node",
+          "parent": "1",
+          "label": "YAŞAR AY"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-38",
+          "type": "node",
+          "parent": "1",
+          "label": "İSMAİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-40",
+          "target": "AqyniHqVunz7Ddo_49Cv-42"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-40",
+          "type": "node",
+          "parent": "1",
+          "label": "BEKİR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-45",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-42",
+          "target": "AqyniHqVunz7Ddo_49Cv-44"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-48",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-42",
+          "target": "AqyniHqVunz7Ddo_49Cv-47"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-42",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-50",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-44",
+          "target": "AqyniHqVunz7Ddo_49Cv-49"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-44",
+          "type": "node",
+          "parent": "1",
+          "label": "HASAN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-47",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-52",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-49",
+          "target": "AqyniHqVunz7Ddo_49Cv-51"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-54",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-49",
+          "target": "AqyniHqVunz7Ddo_49Cv-53"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-57",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-49",
+          "target": "AqyniHqVunz7Ddo_49Cv-56"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-49",
+          "type": "node",
+          "parent": "1",
+          "label": "İSMAİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-59",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-51",
+          "target": "AqyniHqVunz7Ddo_49Cv-58"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-61",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-51",
+          "target": "AqyniHqVunz7Ddo_49Cv-60"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-63",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-51",
+          "target": "AqyniHqVunz7Ddo_49Cv-62"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-51",
+          "type": "node",
+          "parent": "1",
+          "label": "EMİN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-66",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-53",
+          "target": "AqyniHqVunz7Ddo_49Cv-65"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-68",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-53",
+          "target": "AqyniHqVunz7Ddo_49Cv-67"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-71",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-53",
+          "target": "AqyniHqVunz7Ddo_49Cv-70"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-53",
+          "type": "node",
+          "parent": "1",
+          "label": "BEKİR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-73",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-56",
+          "target": "AqyniHqVunz7Ddo_49Cv-81"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-88",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-56",
+          "target": "AqyniHqVunz7Ddo_49Cv-83"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-56",
+          "type": "node",
+          "parent": "1",
+          "label": "M.ZEKİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-86",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-58",
+          "target": "AqyniHqVunz7Ddo_49Cv-85"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-58",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-60",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-21"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-60",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-62",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-32"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-62",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-76",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-65",
+          "target": "AqyniHqVunz7Ddo_49Cv-74"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-78",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-65",
+          "target": "AqyniHqVunz7Ddo_49Cv-77"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-80",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-65",
+          "target": "AqyniHqVunz7Ddo_49Cv-79"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-65",
+          "type": "node",
+          "parent": "1",
+          "label": "MURAT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-67",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-26",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-70",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-25"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-70",
+          "type": "node",
+          "parent": "1",
+          "label": "ZÜLKÜF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-74",
+          "type": "node",
+          "parent": "1",
+          "label": "MUHAMMET \nİSMAİL",
+          "html": "MUHAMMET <br style=\"font-size: 18px;\">İSMAİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-77",
+          "type": "node",
+          "parent": "1",
+          "label": "ABDULLAH \nBEHLÜL",
+          "html": "ABDULLAH <br style=\"font-size: 18px;\">BEHLÜL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-79",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSTAFA EMİR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-81",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖZGÜR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-83",
+          "type": "node",
+          "parent": "1",
+          "label": "VEYSEL"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-85",
+          "target": "H2QYaPfONuYtzV6FWibP-21"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-85",
+          "type": "node",
+          "parent": "1",
+          "label": "FURKAN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-94",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-91",
+          "target": "AqyniHqVunz7Ddo_49Cv-93"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-91",
+          "type": "node",
+          "parent": "1",
+          "label": "H. MEHMET"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-96",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-93",
+          "target": "AqyniHqVunz7Ddo_49Cv-95"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-93",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-98",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-95",
+          "target": "AqyniHqVunz7Ddo_49Cv-97"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-95",
+          "type": "node",
+          "parent": "1",
+          "label": "M. ALİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-100",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-97",
+          "target": "AqyniHqVunz7Ddo_49Cv-99"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-102",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-97",
+          "target": "AqyniHqVunz7Ddo_49Cv-101"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-97",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET DEMİREL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-99",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-101",
+          "type": "node",
+          "parent": "1",
+          "label": "MURAT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-106",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-103",
+          "target": "AqyniHqVunz7Ddo_49Cv-105"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-110",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-103",
+          "target": "AqyniHqVunz7Ddo_49Cv-109"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-112",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-103",
+          "target": "AqyniHqVunz7Ddo_49Cv-111"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-114",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-103",
+          "target": "AqyniHqVunz7Ddo_49Cv-113"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-116",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-103",
+          "target": "AqyniHqVunz7Ddo_49Cv-115"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-103",
+          "type": "node",
+          "parent": "1",
+          "label": "İSMAİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-105",
+          "type": "node",
+          "parent": "1",
+          "label": "MEVLÜT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-109",
+          "type": "node",
+          "parent": "1",
+          "label": "DERVİŞ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-118",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-111",
+          "target": "AqyniHqVunz7Ddo_49Cv-117"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-120",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-111",
+          "target": "AqyniHqVunz7Ddo_49Cv-119"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-111",
+          "type": "node",
+          "parent": "1",
+          "label": "EŞREF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-113",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖMER"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-115",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSTAFA"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-128",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-117",
+          "target": "AqyniHqVunz7Ddo_49Cv-127"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-130",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-117",
+          "target": "AqyniHqVunz7Ddo_49Cv-129"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-117",
+          "type": "node",
+          "parent": "1",
+          "label": "A.CELİL"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-122",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-119",
+          "target": "AqyniHqVunz7Ddo_49Cv-121"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-124",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-119",
+          "target": "AqyniHqVunz7Ddo_49Cv-123"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-126",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-119",
+          "target": "AqyniHqVunz7Ddo_49Cv-125"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-119",
+          "type": "node",
+          "parent": "1",
+          "label": "SELEHATTİN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-64",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-121",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-63"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-121",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-61",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-123",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-60"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-123",
+          "type": "node",
+          "parent": "1",
+          "label": "METİN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-66",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-125",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-65"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-125",
+          "type": "node",
+          "parent": "1",
+          "label": "ORHAN"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-129",
+          "target": "H2QYaPfONuYtzV6FWibP-17"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-129",
+          "type": "node",
+          "parent": "1",
+          "label": "ABDULLAH"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-145",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-133",
+          "target": "AqyniHqVunz7Ddo_49Cv-144"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-147",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-133",
+          "target": "AqyniHqVunz7Ddo_49Cv-146"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-133",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMEDİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-142",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-135",
+          "target": "AqyniHqVunz7Ddo_49Cv-141"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-135",
+          "type": "node",
+          "parent": "1",
+          "label": "ŞERİF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-140",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-137",
+          "target": "AqyniHqVunz7Ddo_49Cv-139"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-137",
+          "type": "node",
+          "parent": "1",
+          "label": "MOLLA \nFERHAN",
+          "html": "MOLLA <br style=\"font-size: 18px;\">FERHAN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-139",
+          "type": "node",
+          "parent": "1",
+          "label": "MOLLA \nZÜFER",
+          "html": "MOLLA <br style=\"font-size: 18px;\">ZÜFER"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-141",
+          "type": "node",
+          "parent": "1",
+          "label": "AVİDE"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-144",
+          "type": "node",
+          "parent": "1",
+          "label": "EKREM"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-151",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-146",
+          "target": "AqyniHqVunz7Ddo_49Cv-150"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-155",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-146",
+          "target": "AqyniHqVunz7Ddo_49Cv-154"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-158",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-146",
+          "target": "AqyniHqVunz7Ddo_49Cv-157"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-160",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-146",
+          "target": "AqyniHqVunz7Ddo_49Cv-159"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-146",
+          "type": "node",
+          "parent": "1",
+          "label": "SELİM"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-162",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-150",
+          "target": "AqyniHqVunz7Ddo_49Cv-161"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-169",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-150",
+          "target": "AqyniHqVunz7Ddo_49Cv-168"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-263",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-150",
+          "target": "AqyniHqVunz7Ddo_49Cv-167"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-264",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-150",
+          "target": "AqyniHqVunz7Ddo_49Cv-164"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-150",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET AY"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-171",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-154",
+          "target": "AqyniHqVunz7Ddo_49Cv-170"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-173",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-154",
+          "target": "AqyniHqVunz7Ddo_49Cv-172"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-154",
+          "type": "node",
+          "parent": "1",
+          "label": "FEYZULLAH AY"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-175",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-157",
+          "target": "AqyniHqVunz7Ddo_49Cv-174"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-178",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-157",
+          "target": "AqyniHqVunz7Ddo_49Cv-177"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-180",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-157",
+          "target": "AqyniHqVunz7Ddo_49Cv-179"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-182",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-157",
+          "target": "AqyniHqVunz7Ddo_49Cv-181"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-157",
+          "type": "node",
+          "parent": "1",
+          "label": "EKREM AY"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-159",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-184",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-161",
+          "target": "AqyniHqVunz7Ddo_49Cv-183"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-186",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-161",
+          "target": "AqyniHqVunz7Ddo_49Cv-185"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-188",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-161",
+          "target": "AqyniHqVunz7Ddo_49Cv-187"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-190",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-161",
+          "target": "AqyniHqVunz7Ddo_49Cv-189"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-161",
+          "target": "H2QYaPfONuYtzV6FWibP-15"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-161",
+          "type": "node",
+          "parent": "1",
+          "label": "VASFİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-164",
+          "type": "node",
+          "parent": "1",
+          "label": "LATİF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-192",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-167",
+          "target": "AqyniHqVunz7Ddo_49Cv-191"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-167",
+          "type": "node",
+          "parent": "1",
+          "label": "ABDULLAH"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-168",
+          "type": "node",
+          "parent": "1",
+          "label": "YAŞAR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-194",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-170",
+          "target": "AqyniHqVunz7Ddo_49Cv-193"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-197",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-170",
+          "target": "AqyniHqVunz7Ddo_49Cv-196"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-170",
+          "type": "node",
+          "parent": "1",
+          "label": "RAİF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-200",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-172",
+          "target": "AqyniHqVunz7Ddo_49Cv-198"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-202",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-172",
+          "target": "AqyniHqVunz7Ddo_49Cv-201"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-204",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-172",
+          "target": "AqyniHqVunz7Ddo_49Cv-203"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-172",
+          "type": "node",
+          "parent": "1",
+          "label": "ZEKİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-174",
+          "type": "node",
+          "parent": "1",
+          "label": "EDİP"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-177",
+          "type": "node",
+          "parent": "1",
+          "label": "SEDAT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-179",
+          "type": "node",
+          "parent": "1",
+          "label": "MUZAFFER"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-208",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-181",
+          "target": "AqyniHqVunz7Ddo_49Cv-207"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-181",
+          "type": "node",
+          "parent": "1",
+          "label": "MURAT"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-183",
+          "target": "H2QYaPfONuYtzV6FWibP-19"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-183",
+          "type": "node",
+          "parent": "1",
+          "label": "HİLMİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-185",
+          "type": "node",
+          "parent": "1",
+          "label": "REMZİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-187",
+          "type": "node",
+          "parent": "1",
+          "label": "MUTALİP"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-189",
+          "type": "node",
+          "parent": "1",
+          "label": "NİHAT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-191",
+          "type": "node",
+          "parent": "1",
+          "label": "SALİH"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-193",
+          "type": "node",
+          "parent": "1",
+          "label": "VEYSEL"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-196",
+          "target": "EYDcI98PKQbb1yufp8LA-14"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-196",
+          "target": "EYDcI98PKQbb1yufp8LA-16"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-196",
+          "target": "EYDcI98PKQbb1yufp8LA-18"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-196",
+          "type": "node",
+          "parent": "1",
+          "label": "ŞERZAT"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-198",
+          "target": "EYDcI98PKQbb1yufp8LA-21"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-198",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-24",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-201",
+          "target": "EYDcI98PKQbb1yufp8LA-23"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-201",
+          "type": "node",
+          "parent": "1",
+          "label": "YUNUS"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-203",
+          "type": "node",
+          "parent": "1",
+          "label": "YAŞAR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-207",
+          "type": "node",
+          "parent": "1",
+          "label": "M. EDİP"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-224",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-209",
+          "target": "AqyniHqVunz7Ddo_49Cv-223"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-226",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-209",
+          "target": "AqyniHqVunz7Ddo_49Cv-225"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-209",
+          "type": "node",
+          "parent": "1",
+          "label": "ESAT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-222",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-211",
+          "target": "AqyniHqVunz7Ddo_49Cv-221"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-211",
+          "type": "node",
+          "parent": "1",
+          "label": "SELİM"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-276",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-213",
+          "target": "AqyniHqVunz7Ddo_49Cv-275"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-278",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-213",
+          "target": "AqyniHqVunz7Ddo_49Cv-277"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-280",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-213",
+          "target": "AqyniHqVunz7Ddo_49Cv-279"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-213",
+          "type": "node",
+          "parent": "1",
+          "label": "ZEVAL"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-106",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-215",
+          "target": "a6xykBAzBDo3noPkfrRk-105"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-215",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-109",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-217",
+          "target": "a6xykBAzBDo3noPkfrRk-108"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-111",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-217",
+          "target": "a6xykBAzBDo3noPkfrRk-110"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-217",
+          "type": "node",
+          "parent": "1",
+          "label": "KEMREŞ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-115",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-219",
+          "target": "a6xykBAzBDo3noPkfrRk-114"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-117",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-219",
+          "target": "a6xykBAzBDo3noPkfrRk-116"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-119",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-219",
+          "target": "a6xykBAzBDo3noPkfrRk-118"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-121",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-219",
+          "target": "a6xykBAzBDo3noPkfrRk-120"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-219",
+          "type": "node",
+          "parent": "1",
+          "label": "DERVİŞ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-221",
+          "type": "node",
+          "parent": "1",
+          "label": "ADANA KARAİSALI ZEĞALLI KÖYÜNDE MEZARI VAR. HÜSEYİN VE RAMAZAN BÜYÜKBİÇER. KIZI FİRDEVS BERKYEZ.&nbsp;",
+          "metadata": {
+            "NOT": "T"
+          }
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-240",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-223",
+          "target": "AqyniHqVunz7Ddo_49Cv-239"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-242",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-223",
+          "target": "AqyniHqVunz7Ddo_49Cv-241"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-244",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-223",
+          "target": "AqyniHqVunz7Ddo_49Cv-243"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-223",
+          "type": "node",
+          "parent": "1",
+          "label": "İBRAHİM"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-225",
+          "type": "node",
+          "parent": "1",
+          "label": "FETTAH"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-230",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-225",
+          "target": "AqyniHqVunz7Ddo_49Cv-229"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-232",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-229",
+          "target": "AqyniHqVunz7Ddo_49Cv-231"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-236",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-229",
+          "target": "AqyniHqVunz7Ddo_49Cv-235"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-238",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-229",
+          "target": "AqyniHqVunz7Ddo_49Cv-237"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-229",
+          "type": "node",
+          "parent": "1",
+          "label": "ZEKİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-266",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-231",
+          "target": "AqyniHqVunz7Ddo_49Cv-265"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-231",
+          "type": "node",
+          "parent": "1",
+          "label": "HASAN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-268",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-233",
+          "target": "AqyniHqVunz7Ddo_49Cv-267"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-235",
+          "type": "node",
+          "parent": "1",
+          "label": "S.SADİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-270",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-237",
+          "target": "AqyniHqVunz7Ddo_49Cv-269"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-272",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-237",
+          "target": "AqyniHqVunz7Ddo_49Cv-271"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-274",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-237",
+          "target": "AqyniHqVunz7Ddo_49Cv-273"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-237",
+          "type": "node",
+          "parent": "1",
+          "label": "İ. ESAT"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-246",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-239",
+          "target": "AqyniHqVunz7Ddo_49Cv-245"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-250",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-239",
+          "target": "AqyniHqVunz7Ddo_49Cv-249"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-239",
+          "target": "AqyniHqVunz7Ddo_49Cv-247"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-239",
+          "type": "node",
+          "parent": "1",
+          "label": "HÜSEYİN"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-241",
+          "type": "node",
+          "parent": "1",
+          "label": "BEKİR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-252",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-243",
+          "target": "AqyniHqVunz7Ddo_49Cv-251"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-254",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-243",
+          "target": "AqyniHqVunz7Ddo_49Cv-253"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-256",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-243",
+          "target": "AqyniHqVunz7Ddo_49Cv-255"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-243",
+          "type": "node",
+          "parent": "1",
+          "label": "HANİFİ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-258",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-245",
+          "target": "AqyniHqVunz7Ddo_49Cv-257"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-260",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-245",
+          "target": "AqyniHqVunz7Ddo_49Cv-259"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-262",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-245",
+          "target": "AqyniHqVunz7Ddo_49Cv-261"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-245",
+          "type": "node",
+          "parent": "1",
+          "label": "HASAN"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-37",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-247",
+          "target": "EYDcI98PKQbb1yufp8LA-36"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-247",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-249",
+          "type": "node",
+          "parent": "1",
+          "label": "YUNUS"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-251",
+          "target": "EYDcI98PKQbb1yufp8LA-32"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-35",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-251",
+          "target": "EYDcI98PKQbb1yufp8LA-34"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-251",
+          "type": "node",
+          "parent": "1",
+          "label": "FATİH"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-253",
+          "type": "node",
+          "parent": "1",
+          "label": "FETTAH"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-29",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-255",
+          "target": "EYDcI98PKQbb1yufp8LA-28"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-255",
+          "target": "EYDcI98PKQbb1yufp8LA-30"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-255",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖMER"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-257",
+          "type": "node",
+          "parent": "1",
+          "label": "İBRAHİM ESAT"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-259",
+          "target": "EYDcI98PKQbb1yufp8LA-38"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-42",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-259",
+          "target": "EYDcI98PKQbb1yufp8LA-41"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-259",
+          "type": "node",
+          "parent": "1",
+          "label": "KADİR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-261",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSAB"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-265",
+          "type": "node",
+          "parent": "1",
+          "label": "UĞUR"
+        },
+        {
+          "id": "xTFDjEu9PCqOOmqI_Yr8-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-267",
+          "target": "xTFDjEu9PCqOOmqI_Yr8-1"
+        },
+        {
+          "id": "xTFDjEu9PCqOOmqI_Yr8-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-267",
+          "target": "xTFDjEu9PCqOOmqI_Yr8-3"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-267",
+          "type": "node",
+          "parent": "1",
+          "label": "FETTAH"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-269",
+          "type": "node",
+          "parent": "1",
+          "label": "CAN"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-271",
+          "target": "H2QYaPfONuYtzV6FWibP-4"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-271",
+          "type": "node",
+          "parent": "1",
+          "label": "CANER"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-273",
+          "type": "node",
+          "parent": "1",
+          "label": "ULUCAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-275",
+          "target": "a6xykBAzBDo3noPkfrRk-1"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-275",
+          "target": "a6xykBAzBDo3noPkfrRk-4"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-275",
+          "type": "node",
+          "parent": "1",
+          "label": "İSMAİL"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-39",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-277",
+          "target": "a6xykBAzBDo3noPkfrRk-38"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-277",
+          "type": "node",
+          "parent": "1",
+          "label": "BEŞİR"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-279",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖMER"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-1",
+          "target": "a6xykBAzBDo3noPkfrRk-8"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-1",
+          "type": "node",
+          "parent": "1",
+          "label": "SELİM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-229",
+          "target": "AqyniHqVunz7Ddo_49Cv-233"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-233",
+          "type": "node",
+          "parent": "1",
+          "label": "HÜSEYİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-17",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-4",
+          "target": "a6xykBAzBDo3noPkfrRk-16"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-19",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-4",
+          "target": "a6xykBAzBDo3noPkfrRk-18"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-4",
+          "type": "node",
+          "parent": "1",
+          "label": "RECEP"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-21",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-6",
+          "target": "a6xykBAzBDo3noPkfrRk-20"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-8",
+          "target": "a6xykBAzBDo3noPkfrRk-10"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-8",
+          "target": "a6xykBAzBDo3noPkfrRk-13"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-8",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-3",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-10",
+          "target": "EYDcI98PKQbb1yufp8LA-2"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-10",
+          "type": "node",
+          "parent": "1",
+          "label": "UĞUR"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-13",
+          "type": "node",
+          "parent": "1",
+          "label": "SELİM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-23",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "a6xykBAzBDo3noPkfrRk-22"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-25",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "a6xykBAzBDo3noPkfrRk-24"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-27",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "a6xykBAzBDo3noPkfrRk-26"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "a6xykBAzBDo3noPkfrRk-30"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-33",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "a6xykBAzBDo3noPkfrRk-32"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-74",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "a6xykBAzBDo3noPkfrRk-28"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-76",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-75"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-78",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-16",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-77"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-16",
+          "type": "node",
+          "parent": "1",
+          "label": "M. SIDDIK"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-35",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-18",
+          "target": "a6xykBAzBDo3noPkfrRk-34"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-37",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-18",
+          "target": "a6xykBAzBDo3noPkfrRk-36"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-18",
+          "type": "node",
+          "parent": "1",
+          "label": "BAYRAM"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-2",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-20",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-1"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-20",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-3"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-20",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-5"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-20",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-7"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-10",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-20",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-9"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-20",
+          "type": "node",
+          "parent": "1",
+          "label": "ÖMER"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-50",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-22",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-49"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-22",
+          "type": "node",
+          "parent": "1",
+          "label": "MELİK"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-59",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-24",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-58"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-24",
+          "type": "node",
+          "parent": "1",
+          "label": "CÜNEYT"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-54",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-26",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-53"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-26",
+          "type": "node",
+          "parent": "1",
+          "label": "HASAN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-52",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-30",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-51"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-30",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ UĞUR"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-32",
+          "target": "WebRWkfOKWYtirOi1o-t-14"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-32",
+          "type": "node",
+          "parent": "1",
+          "label": "RECEP"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-29",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-34",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-28"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-31",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-34",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-30"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-34",
+          "type": "node",
+          "parent": "1",
+          "label": "M. ALİ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-36",
+          "type": "node",
+          "parent": "1",
+          "label": "Ö. FARUK"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-41",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-38",
+          "target": "a6xykBAzBDo3noPkfrRk-40"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-43",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-38",
+          "target": "a6xykBAzBDo3noPkfrRk-42"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-45",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-38",
+          "target": "a6xykBAzBDo3noPkfrRk-44"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-38",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-47",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-40",
+          "target": "a6xykBAzBDo3noPkfrRk-46"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-49",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-40",
+          "target": "a6xykBAzBDo3noPkfrRk-48"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-51",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-40",
+          "target": "a6xykBAzBDo3noPkfrRk-50"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-53",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-40",
+          "target": "a6xykBAzBDo3noPkfrRk-52"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-56",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-40",
+          "target": "a6xykBAzBDo3noPkfrRk-55"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-58",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-40",
+          "target": "a6xykBAzBDo3noPkfrRk-57"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-40",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-80",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-42",
+          "target": "a6xykBAzBDo3noPkfrRk-79"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-82",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-42",
+          "target": "a6xykBAzBDo3noPkfrRk-81"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-84",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-42",
+          "target": "a6xykBAzBDo3noPkfrRk-83"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-86",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-42",
+          "target": "a6xykBAzBDo3noPkfrRk-85"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-42",
+          "type": "node",
+          "parent": "1",
+          "label": "İBRAHİM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-96",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-44",
+          "target": "a6xykBAzBDo3noPkfrRk-95"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-98",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-44",
+          "target": "a6xykBAzBDo3noPkfrRk-97"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-100",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-44",
+          "target": "a6xykBAzBDo3noPkfrRk-99"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-102",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-44",
+          "target": "a6xykBAzBDo3noPkfrRk-101"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-104",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-44",
+          "target": "a6xykBAzBDo3noPkfrRk-103"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-44",
+          "type": "node",
+          "parent": "1",
+          "label": "ŞADİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-60",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-46",
+          "target": "a6xykBAzBDo3noPkfrRk-59"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-46",
+          "type": "node",
+          "parent": "1",
+          "label": "HALİM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-63",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-48",
+          "target": "a6xykBAzBDo3noPkfrRk-62"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-65",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-48",
+          "target": "a6xykBAzBDo3noPkfrRk-64"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-67",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-48",
+          "target": "a6xykBAzBDo3noPkfrRk-66"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-69",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-48",
+          "target": "a6xykBAzBDo3noPkfrRk-68"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-48",
+          "type": "node",
+          "parent": "1",
+          "label": "ESAT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-50",
+          "type": "node",
+          "parent": "1",
+          "label": "İLHAMİ"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-8",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-52",
+          "target": "H2QYaPfONuYtzV6FWibP-6"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-10",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-52",
+          "target": "H2QYaPfONuYtzV6FWibP-9"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-52",
+          "type": "node",
+          "parent": "1",
+          "label": "YAVUZ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-55",
+          "type": "node",
+          "parent": "1",
+          "label": "HARUN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-57",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-59",
+          "target": "WebRWkfOKWYtirOi1o-t-10"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-59",
+          "target": "WebRWkfOKWYtirOi1o-t-12"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-59",
+          "type": "node",
+          "parent": "1",
+          "label": "YUNUS"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-36",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-62",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-35"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-62",
+          "type": "node",
+          "parent": "1",
+          "label": "OSMAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-71",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-64",
+          "target": "a6xykBAzBDo3noPkfrRk-70"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-38",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-64",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-37"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-40",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-64",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-39"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-64",
+          "type": "node",
+          "parent": "1",
+          "label": "HAKAN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-42",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-66",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-41"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-44",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-66",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-43"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-66",
+          "type": "node",
+          "parent": "1",
+          "label": "SAMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-46",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-68",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-45"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-48",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-68",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-47"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-68",
+          "type": "node",
+          "parent": "1",
+          "label": "KADİR"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-70",
+          "type": "node",
+          "parent": "1",
+          "label": "A.SAMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-57",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-28",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-56"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-28",
+          "type": "node",
+          "parent": "1",
+          "label": "M. ZEKİ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-74",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-275",
+          "target": "a6xykBAzBDo3noPkfrRk-6"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-6",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-75",
+          "type": "edge",
+          "parent": "1",
+          "source": "AqyniHqVunz7Ddo_49Cv-103",
+          "target": "AqyniHqVunz7Ddo_49Cv-107"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-107",
+          "type": "node",
+          "parent": "1",
+          "label": "ZÜMRÜ"
+        },
+        {
+          "id": "AqyniHqVunz7Ddo_49Cv-127",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-88",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-79",
+          "target": "a6xykBAzBDo3noPkfrRk-87"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-90",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-79",
+          "target": "a6xykBAzBDo3noPkfrRk-89"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-79",
+          "type": "node",
+          "parent": "1",
+          "label": "KAZIM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-92",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-81",
+          "target": "a6xykBAzBDo3noPkfrRk-91"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-94",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-81",
+          "target": "a6xykBAzBDo3noPkfrRk-93"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-81",
+          "type": "node",
+          "parent": "1",
+          "label": "RAMAZAN"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-7",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-83",
+          "target": "EYDcI98PKQbb1yufp8LA-6"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-9",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-83",
+          "target": "EYDcI98PKQbb1yufp8LA-8"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-83",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-5",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-85",
+          "target": "EYDcI98PKQbb1yufp8LA-4"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-85",
+          "target": "EYDcI98PKQbb1yufp8LA-10"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-85",
+          "target": "EYDcI98PKQbb1yufp8LA-12"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-85",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSTAFA"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-87",
+          "type": "node",
+          "parent": "1",
+          "label": "ABDULLAH"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-89",
+          "type": "node",
+          "parent": "1",
+          "label": "ENES"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-91",
+          "type": "node",
+          "parent": "1",
+          "label": "EYÜP"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-93",
+          "type": "node",
+          "parent": "1",
+          "label": "MURAT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-212",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-95",
+          "target": "a6xykBAzBDo3noPkfrRk-211"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-214",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-95",
+          "target": "a6xykBAzBDo3noPkfrRk-213"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-216",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-95",
+          "target": "a6xykBAzBDo3noPkfrRk-215"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-95",
+          "type": "node",
+          "parent": "1",
+          "label": "NAZIM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-218",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-97",
+          "target": "a6xykBAzBDo3noPkfrRk-217"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-97",
+          "type": "node",
+          "parent": "1",
+          "label": "TEKİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-204",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-99",
+          "target": "a6xykBAzBDo3noPkfrRk-203"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-206",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-99",
+          "target": "a6xykBAzBDo3noPkfrRk-205"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-99",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-101",
+          "type": "node",
+          "parent": "1",
+          "label": "ASIF"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-208",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-103",
+          "target": "a6xykBAzBDo3noPkfrRk-207"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-210",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-103",
+          "target": "a6xykBAzBDo3noPkfrRk-209"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-103",
+          "type": "node",
+          "parent": "1",
+          "label": "ÇETİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-105",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-108",
+          "type": "node",
+          "parent": "1",
+          "label": "MOLLA ARİF"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-113",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-110",
+          "target": "a6xykBAzBDo3noPkfrRk-112"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-110",
+          "type": "node",
+          "parent": "1",
+          "label": "MEVLÜT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-112",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT\n(DİYARBAKIR)",
+          "html": "MAHMUT<br>(DİYARBAKIR)"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-114",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-158",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-116",
+          "target": "a6xykBAzBDo3noPkfrRk-157"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-160",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-116",
+          "target": "a6xykBAzBDo3noPkfrRk-159"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-116",
+          "type": "node",
+          "parent": "1",
+          "label": "SÜLEYMAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-118",
+          "type": "node",
+          "parent": "1",
+          "label": "A.KERİM"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-123",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-120",
+          "target": "a6xykBAzBDo3noPkfrRk-122"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-125",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-120",
+          "target": "a6xykBAzBDo3noPkfrRk-124"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-127",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-120",
+          "target": "a6xykBAzBDo3noPkfrRk-126"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-129",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-120",
+          "target": "a6xykBAzBDo3noPkfrRk-128"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-120",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-131",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-122",
+          "target": "a6xykBAzBDo3noPkfrRk-130"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-133",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-122",
+          "target": "a6xykBAzBDo3noPkfrRk-132"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-136",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-122",
+          "target": "a6xykBAzBDo3noPkfrRk-135"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-122",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-140",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-124",
+          "target": "a6xykBAzBDo3noPkfrRk-139"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-143",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-124",
+          "target": "a6xykBAzBDo3noPkfrRk-142"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-145",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-124",
+          "target": "a6xykBAzBDo3noPkfrRk-144"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-147",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-124",
+          "target": "a6xykBAzBDo3noPkfrRk-146"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-124",
+          "type": "node",
+          "parent": "1",
+          "label": "SIDDIK"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-149",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-126",
+          "target": "a6xykBAzBDo3noPkfrRk-148"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-152",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-126",
+          "target": "a6xykBAzBDo3noPkfrRk-151"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-126",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSTAFA"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-154",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-128",
+          "target": "a6xykBAzBDo3noPkfrRk-153"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-156",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-128",
+          "target": "a6xykBAzBDo3noPkfrRk-155"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-128",
+          "type": "node",
+          "parent": "1",
+          "label": "HALİL"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-138",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-130",
+          "target": "a6xykBAzBDo3noPkfrRk-137"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-130",
+          "type": "node",
+          "parent": "1",
+          "label": "FERHAT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-220",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-132",
+          "target": "a6xykBAzBDo3noPkfrRk-219"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-24",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-132",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-23"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-132",
+          "type": "node",
+          "parent": "1",
+          "label": "SERHAT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-135",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİCAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-137",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSTAFA\nÇAĞRI",
+          "html": "MUSTAFA<div>ÇAĞRI</div>"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-139",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-13"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-139",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-15"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-139",
+          "type": "node",
+          "parent": "1",
+          "label": "GÖKHAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-222",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-142",
+          "target": "a6xykBAzBDo3noPkfrRk-221"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-142",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-11"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-142",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-144",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-17"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-144",
+          "type": "node",
+          "parent": "1",
+          "label": "M.FARUK"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-20",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-146",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-19"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-146",
+          "type": "node",
+          "parent": "1",
+          "label": "Y.EMRE"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-6",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-148",
+          "target": "WebRWkfOKWYtirOi1o-t-5"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-148",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-151",
+          "type": "node",
+          "parent": "1",
+          "label": "SELMAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-153",
+          "type": "node",
+          "parent": "1",
+          "label": "OKTAY"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-224",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-155",
+          "target": "a6xykBAzBDo3noPkfrRk-223"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-155",
+          "type": "node",
+          "parent": "1",
+          "label": "MAHMUT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-162",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-157",
+          "target": "a6xykBAzBDo3noPkfrRk-161"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-164",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-157",
+          "target": "a6xykBAzBDo3noPkfrRk-163"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-166",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-157",
+          "target": "a6xykBAzBDo3noPkfrRk-165"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-157",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-168",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "a6xykBAzBDo3noPkfrRk-167"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-170",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "a6xykBAzBDo3noPkfrRk-169"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-172",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "a6xykBAzBDo3noPkfrRk-171"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-174",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "a6xykBAzBDo3noPkfrRk-173"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-176",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "a6xykBAzBDo3noPkfrRk-175"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-11",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-5"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-12",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-6"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-13",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-7"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-14",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-8"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-15",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-9"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-16",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-159",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-10"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-159",
+          "type": "node",
+          "parent": "1",
+          "label": "SELEHATTİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-184",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-161",
+          "target": "a6xykBAzBDo3noPkfrRk-183"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-161",
+          "type": "node",
+          "parent": "1",
+          "label": "M.EMİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-163",
+          "type": "node",
+          "parent": "1",
+          "label": "VAHDETTİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-165",
+          "type": "node",
+          "parent": "1",
+          "label": "M. AKİF"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-178",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-167",
+          "target": "a6xykBAzBDo3noPkfrRk-177"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-180",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-167",
+          "target": "a6xykBAzBDo3noPkfrRk-179"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-182",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-167",
+          "target": "a6xykBAzBDo3noPkfrRk-181"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-167",
+          "type": "node",
+          "parent": "1",
+          "label": "BÜNYAMİN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-186",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-169",
+          "target": "a6xykBAzBDo3noPkfrRk-185"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-169",
+          "type": "node",
+          "parent": "1",
+          "label": "MELİH"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-190",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-171",
+          "target": "a6xykBAzBDo3noPkfrRk-189"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-171",
+          "type": "node",
+          "parent": "1",
+          "label": "HULUSİ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-195",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-173",
+          "target": "a6xykBAzBDo3noPkfrRk-194"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-173",
+          "type": "node",
+          "parent": "1",
+          "label": "HAKKI"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-198",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-175",
+          "target": "a6xykBAzBDo3noPkfrRk-197"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-175",
+          "type": "node",
+          "parent": "1",
+          "label": "BİLAL"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-177",
+          "type": "node",
+          "parent": "1",
+          "label": "MUAZ"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-200",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-179",
+          "target": "a6xykBAzBDo3noPkfrRk-199"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-179",
+          "type": "node",
+          "parent": "1",
+          "label": "SÜLEYMAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-181",
+          "type": "node",
+          "parent": "1",
+          "label": "M. SAİT"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-18",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-183",
+          "target": "QOoOLjnNNxyBaES2Z0Q2-17"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-183",
+          "type": "node",
+          "parent": "1",
+          "label": "BURAK"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-188",
+          "type": "edge",
+          "parent": "1",
+          "source": "a6xykBAzBDo3noPkfrRk-185",
+          "target": "a6xykBAzBDo3noPkfrRk-187"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-185",
+          "type": "node",
+          "parent": "1",
+          "label": "SEMİH"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-187",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ BUĞRA"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-189",
+          "type": "node",
+          "parent": "1",
+          "label": "EREN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-194",
+          "type": "node",
+          "parent": "1",
+          "label": "SALİH"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-197",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ SAİT"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-199",
+          "type": "node",
+          "parent": "1",
+          "label": "ILGAR"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-203",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSAB"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-205",
+          "type": "node",
+          "parent": "1",
+          "label": "BURAK"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-207",
+          "type": "node",
+          "parent": "1",
+          "label": "A. ASAF"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-209",
+          "type": "node",
+          "parent": "1",
+          "label": "ARAS"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-211",
+          "type": "node",
+          "parent": "1",
+          "label": "SÜLEYMAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-213",
+          "type": "node",
+          "parent": "1",
+          "label": "A. İRFAN"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-215",
+          "type": "node",
+          "parent": "1",
+          "label": "M. FATİH"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-217",
+          "type": "node",
+          "parent": "1",
+          "label": "ENİS"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-219",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ ASGAR"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-221",
+          "type": "node",
+          "parent": "1",
+          "label": "HAMZA"
+        },
+        {
+          "id": "a6xykBAzBDo3noPkfrRk-223",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-1",
+          "type": "node",
+          "parent": "1",
+          "label": "ÜMİT"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-3",
+          "type": "node",
+          "parent": "1",
+          "label": "İSMAİL"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-5",
+          "type": "node",
+          "parent": "1",
+          "label": "OSMAN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-68",
+          "type": "edge",
+          "parent": "1",
+          "source": "0qOEHa7Ljcbo9qhMb2V2-7",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-67"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-70",
+          "type": "edge",
+          "parent": "1",
+          "source": "0qOEHa7Ljcbo9qhMb2V2-7",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-69"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-7",
+          "type": "node",
+          "parent": "1",
+          "label": "AZİZ"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-72",
+          "type": "edge",
+          "parent": "1",
+          "source": "0qOEHa7Ljcbo9qhMb2V2-9",
+          "target": "0qOEHa7Ljcbo9qhMb2V2-71"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-9",
+          "type": "node",
+          "parent": "1",
+          "label": "A. KADİR"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-11",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-13",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSTAFA"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-15",
+          "type": "node",
+          "parent": "1",
+          "label": "TUNAHAN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-17",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSAB"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-19",
+          "type": "node",
+          "parent": "1",
+          "label": "SIDDIK EYMEN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-21",
+          "type": "node",
+          "parent": "1",
+          "label": "OĞUZHAN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-23",
+          "type": "node",
+          "parent": "1",
+          "label": "HÜSEYİN SECCAD"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-25",
+          "type": "node",
+          "parent": "1",
+          "label": "TALHA"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-28",
+          "type": "node",
+          "parent": "1",
+          "label": "İBRAHİM ARAS"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-30",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ TUNA"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-32",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-35",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSAB"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-37",
+          "type": "node",
+          "parent": "1",
+          "label": "ENES MİRZA"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-39",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET EFE"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-41",
+          "type": "node",
+          "parent": "1",
+          "label": "USAME"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-43",
+          "type": "node",
+          "parent": "1",
+          "label": "VEYSEL"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-45",
+          "type": "node",
+          "parent": "1",
+          "label": "BERAT"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-47",
+          "type": "node",
+          "parent": "1",
+          "label": "BURAK"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-49",
+          "type": "node",
+          "parent": "1",
+          "label": "SEFA"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-51",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ BARAN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-53",
+          "type": "node",
+          "parent": "1",
+          "label": "AYETULLAH"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-56",
+          "type": "node",
+          "parent": "1",
+          "label": "MUHAMMET"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-58",
+          "type": "node",
+          "parent": "1",
+          "label": "MUHAMMET YUSUF"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-60",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF SAİT"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-63",
+          "type": "node",
+          "parent": "1",
+          "label": "SEMİH"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-65",
+          "type": "node",
+          "parent": "1",
+          "label": "EYMEN"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-67",
+          "type": "node",
+          "parent": "1",
+          "label": "ENSAR"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-69",
+          "type": "node",
+          "parent": "1",
+          "label": "RÜZGAR"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-71",
+          "type": "node",
+          "parent": "1",
+          "label": "DUHA"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-75",
+          "type": "node",
+          "parent": "1",
+          "label": "UĞUR"
+        },
+        {
+          "id": "0qOEHa7Ljcbo9qhMb2V2-77",
+          "type": "node",
+          "parent": "1",
+          "label": "OĞUZ"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-2",
+          "type": "node",
+          "parent": "1",
+          "label": "MEHMET"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-4",
+          "type": "node",
+          "parent": "1",
+          "label": "NURULLAH"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-6",
+          "type": "node",
+          "parent": "1",
+          "label": "ENSAR"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-8",
+          "type": "node",
+          "parent": "1",
+          "label": "TAHA"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-10",
+          "type": "node",
+          "parent": "1",
+          "label": "HAMZA"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-12",
+          "type": "node",
+          "parent": "1",
+          "label": "VEYSEL"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-14",
+          "type": "node",
+          "parent": "1",
+          "label": "CİVAN"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-16",
+          "type": "node",
+          "parent": "1",
+          "label": "UMUT"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-18",
+          "type": "node",
+          "parent": "1",
+          "label": "ALİ KEMAL"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-21",
+          "type": "node",
+          "parent": "1",
+          "label": "YASİR ÜVEYS"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-23",
+          "type": "node",
+          "parent": "1",
+          "label": "YUSUF ENSAR"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-28",
+          "type": "node",
+          "parent": "1",
+          "label": "BİLAL"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-30",
+          "type": "node",
+          "parent": "1",
+          "label": "AHMET DAVUT"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-32",
+          "type": "node",
+          "parent": "1",
+          "label": "KEREM"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-34",
+          "type": "node",
+          "parent": "1",
+          "label": "BERAT"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-36",
+          "type": "node",
+          "parent": "1",
+          "label": "MUHAMMET BURAK"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-38",
+          "type": "node",
+          "parent": "1",
+          "label": "EMİR MİRAÇ"
+        },
+        {
+          "id": "EYDcI98PKQbb1yufp8LA-41",
+          "type": "node",
+          "parent": "1",
+          "label": "POYRAZ EFE"
+        },
+        {
+          "id": "xTFDjEu9PCqOOmqI_Yr8-1",
+          "type": "node",
+          "parent": "1",
+          "label": "SERHAT"
+        },
+        {
+          "id": "xTFDjEu9PCqOOmqI_Yr8-3",
+          "type": "node",
+          "parent": "1",
+          "label": "HÜSEYİN"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-4",
+          "type": "node",
+          "parent": "1",
+          "label": "ESAT ACAR"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-6",
+          "type": "node",
+          "parent": "1",
+          "label": "SERHAT"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-9",
+          "type": "node",
+          "parent": "1",
+          "label": "UFUK"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-15",
+          "type": "node",
+          "parent": "1",
+          "label": "KADİR"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-17",
+          "type": "node",
+          "parent": "1",
+          "label": "MUHAMMET"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-19",
+          "type": "node",
+          "parent": "1",
+          "label": "ENES"
+        },
+        {
+          "id": "H2QYaPfONuYtzV6FWibP-21",
+          "type": "node",
+          "parent": "1",
+          "label": "TUNA"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-4",
+          "type": "edge",
+          "parent": "1",
+          "source": "WebRWkfOKWYtirOi1o-t-1",
+          "target": "WebRWkfOKWYtirOi1o-t-3"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-1",
+          "type": "node",
+          "parent": "1",
+          "label": "UĞUR"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-3",
+          "type": "node",
+          "parent": "1",
+          "label": "EYMEN MİRZA"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-5",
+          "type": "node",
+          "parent": "1",
+          "label": "MERT TUNA"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-10",
+          "type": "node",
+          "parent": "1",
+          "label": "BİLAL"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-12",
+          "type": "node",
+          "parent": "1",
+          "label": "BURAK"
+        },
+        {
+          "id": "WebRWkfOKWYtirOi1o-t-14",
+          "type": "node",
+          "parent": "1",
+          "label": "CİHANGİR AYAZ"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-5",
+          "type": "node",
+          "parent": "1",
+          "label": "ARİFE",
+          "metadata": {
+            "gender": "K"
+          }
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-6",
+          "type": "node",
+          "parent": "1",
+          "label": "GÜLBAHAR",
+          "metadata": {
+            "gender": "K"
+          }
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-7",
+          "type": "node",
+          "parent": "1",
+          "label": "VİLDAN",
+          "metadata": {
+            "gender": "K"
+          }
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-8",
+          "type": "node",
+          "parent": "1",
+          "label": "ESMA",
+          "metadata": {
+            "gender": "K"
+          }
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-9",
+          "type": "node",
+          "parent": "1",
+          "label": "HACER",
+          "metadata": {
+            "gender": "K"
+          }
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-10",
+          "type": "node",
+          "parent": "1",
+          "label": "HATİCE",
+          "metadata": {
+            "gender": "K"
+          }
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-17",
+          "type": "node",
+          "parent": "1",
+          "label": "MUSA"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-21",
+          "type": "edge",
+          "parent": "1",
+          "source": "QOoOLjnNNxyBaES2Z0Q2-20",
+          "target": "AqyniHqVunz7Ddo_49Cv-1"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-22",
+          "type": "edge",
+          "parent": "1",
+          "source": "QOoOLjnNNxyBaES2Z0Q2-20",
+          "target": "AqyniHqVunz7Ddo_49Cv-2"
+        },
+        {
+          "id": "QOoOLjnNNxyBaES2Z0Q2-20",
+          "type": "node",
+          "parent": "1",
+          "label": "BİLİNMİYOR"
+        }
+      ]
+    },
+    {
+      "id": "iu2mJ7uNVxx6eFZTniRD",
+      "name": "Sayfa -2",
+      "cells": [
+        {
+          "id": "1",
+          "type": "layer"
+        }
+      ]
+    }
+  ]
+}
