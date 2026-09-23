@@ -125,6 +125,25 @@ function findPersonById(root: any, targetId: string): any {
 }
 
 // ============================================================
+// BİR KİŞİNİN TÜM ALT NESİLLERİNİ BUL (RECURSIVE)
+// ============================================================
+function findAllDescendants(people: Person[], rootId: string): string[] {
+  const descendants: string[] = [];
+  const stack = [rootId];
+
+  while (stack.length > 0) {
+    const currentId = stack.pop()!;
+    const children = people.filter((p) => p.parentId === currentId);
+    children.forEach((child) => {
+      descendants.push(child.id);
+      stack.push(child.id);
+    });
+  }
+
+  return descendants;
+}
+
+// ============================================================
 // DÜZENLENEBİLİR ALAN
 // ============================================================
 interface EditableFieldProps {
@@ -291,6 +310,59 @@ function AddChildForm({ parentName, onAdd, onCancel }: AddChildFormProps) {
 }
 
 // ============================================================
+// SİLME ONAY FORMU
+// ============================================================
+interface DeleteConfirmProps {
+  personName: string;
+  descendantCount: number;
+  onConfirm: () => void;
+  onCancel: () => void;
+}
+
+function DeleteConfirm({
+  personName,
+  descendantCount,
+  onConfirm,
+  onCancel,
+}: DeleteConfirmProps) {
+  return (
+    <div className="modal-overlay" onClick={onCancel}>
+      <div className="modal-content delete-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-header">
+          <h3>🗑️ Kişiyi Sil</h3>
+          <button className="modal-close" onClick={onCancel}>
+            ✕
+          </button>
+        </div>
+        <div className="delete-warning">
+          <p>
+            <strong>"{personName}"</strong> kişisini silmek istediğinizden emin
+            misiniz?
+          </p>
+          {descendantCount > 0 && (
+            <div className="delete-descendants-warning">
+              ⚠️ Bu kişiyle birlikte <strong>{descendantCount} kişi</strong> daha
+              silinecek (alt nesilleri).
+            </div>
+          )}
+          <p className="delete-irreversible">
+            Bu işlem geri alınamaz. (JSON yedeğiniz varsa geri yükleyebilirsiniz.)
+          </p>
+        </div>
+        <div className="form-actions">
+          <button type="button" className="btn-cancel" onClick={onCancel}>
+            İptal
+          </button>
+          <button type="button" className="btn-delete" onClick={onConfirm}>
+            🗑️ Evet, Sil
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
 // ANA UYGULAMA
 // ============================================================
 function App() {
@@ -298,9 +370,9 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [showFemales, setShowFemales] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // localStorage'dan people listesini yükle
   const [people, setPeople] = useState<Person[]>(() => {
     try {
       const saved = localStorage.getItem('peopleData');
@@ -313,16 +385,13 @@ function App() {
     return initialPeople;
   });
 
-  // people değiştikçe localStorage'a kaydet
   useEffect(() => {
     localStorage.setItem('peopleData', JSON.stringify(people));
   }, [people]);
 
-  // Ağaç yapısını kur
   const fullTree = buildTreeFromPeople(people);
   const treeData = showFemales ? fullTree : removeFemales(fullTree);
 
-  // Seçili kişi
   const selectedId = selectedMember?.id || '';
   const selectedPerson = people.find((p) => p.id === selectedId);
 
@@ -334,7 +403,10 @@ function App() {
     ? findPersonById(fullTree, selectedPerson.parentId)?.name || ''
     : '';
 
-  // Kişi bilgisini güncelle
+  const descendants = selectedPerson
+    ? findAllDescendants(people, selectedPerson.id)
+    : [];
+
   const updatePerson = (field: keyof Person, value: string) => {
     if (!selectedId) return;
     setPeople((prev) =>
@@ -345,9 +417,6 @@ function App() {
     );
   };
 
-  // ============================================================
-  // YENİ ÇOCUK EKLE
-  // ============================================================
   const handleAddChild = (data: {
     name: string;
     gender: 'male' | 'female';
@@ -356,7 +425,6 @@ function App() {
   }) => {
     if (!selectedPerson) return;
 
-    // Yeni benzersiz ID oluştur
     const newId = `p_${Date.now()}_${Math.random()
       .toString(36)
       .substr(2, 9)}`;
@@ -380,9 +448,17 @@ function App() {
     alert(`✅ "${data.name}" başarıyla eklendi!`);
   };
 
-  // ============================================================
-  // JSON İNDİR
-  // ============================================================
+  const handleDeleteConfirm = () => {
+    if (!selectedPerson) return;
+
+    const idsToDelete = [selectedPerson.id, ...descendants];
+    setPeople((prev) => prev.filter((p) => !idsToDelete.includes(p.id)));
+
+    setShowDeleteConfirm(false);
+    setSelectedMember(null);
+    alert(`🗑️ ${idsToDelete.length} kişi silindi.`);
+  };
+
   const handleExport = () => {
     const exportData = {
       version: '2.0',
@@ -404,9 +480,6 @@ function App() {
     URL.revokeObjectURL(url);
   };
 
-  // ============================================================
-  // JSON YÜKLE
-  // ============================================================
   const handleImportClick = () => {
     fileInputRef.current?.click();
   };
@@ -440,9 +513,6 @@ function App() {
     e.target.value = '';
   };
 
-  // ============================================================
-  // ÖZEL KUTUCUK
-  // ============================================================
   const renderCustomNode = ({ nodeDatum }: any) => {
     const isFemale = nodeDatum.gender === 'female';
 
@@ -456,16 +526,17 @@ function App() {
       normalizeText(nodeDatum.name).includes(normalizeText(searchTerm));
 
     const bgColor = isMatch
-    ? '#A5D6A7'
-    : isFemale
-    ? '#F48FB1'      // Fuşya pembe
-    : '#F5B183';
+      ? '#A5D6A7'
+      : isFemale
+      ? '#F48FB1'
+      : '#F5B183';
 
     const strokeColor = isMatch
-  ? '#2E7D32'
-  : isFemale
-  ? '#AD1457'      // Koyu fuşya
-  : '#C0622A';
+      ? '#2E7D32'
+      : isFemale
+      ? '#AD1457'
+      : '#C0622A';
+
     return (
       <g
         style={{ cursor: 'pointer' }}
@@ -703,15 +774,32 @@ function App() {
               onSave={(v) => updatePerson('notlar', v)}
             />
           </div>
+
+          <div className="card-actions">
+            <button
+              className="delete-button"
+              onClick={() => setShowDeleteConfirm(true)}
+            >
+              🗑️ Bu Kişiyi Sil
+            </button>
+          </div>
         </div>
       )}
 
-      {/* ÇOCUK EKLEME FORMU */}
       {showAddForm && selectedPerson && (
         <AddChildForm
           parentName={selectedPerson.name}
           onAdd={handleAddChild}
           onCancel={() => setShowAddForm(false)}
+        />
+      )}
+
+      {showDeleteConfirm && selectedPerson && (
+        <DeleteConfirm
+          personName={selectedPerson.name}
+          descendantCount={descendants.length}
+          onConfirm={handleDeleteConfirm}
+          onCancel={() => setShowDeleteConfirm(false)}
         />
       )}
     </div>
