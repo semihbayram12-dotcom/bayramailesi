@@ -4,6 +4,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import Tree from 'react-d3-tree';
 import { initialPeople } from './personData';
+import { db } from './firebase';
+import {
+  collection,
+  doc,
+  setDoc,
+  deleteDoc,
+  getDocs,
+  writeBatch,
+} from 'firebase/firestore';
 
 // ============================================================
 // TÜRKÇE KARAKTER DESTEKLİ NORMALİZASYON
@@ -157,14 +166,47 @@ function EditableField({ value, placeholder, onSave }: EditableFieldProps) {
   const [tempValue, setTempValue] = useState(value);
 
   useEffect(() => {
-    setTempValue(value);
-  }, [value]);
-
-  const handleSave = () => {
-    onSave(tempValue);
-    setIsEditing(false);
-  };
-
+    const loadData = async () => {
+      try {
+        const peopleRef = collection(db, 'people');
+        const snapshot = await getDocs(peopleRef);
+  
+        if (snapshot.empty) {
+          // Firestore boş → initialPeople'ı yükle
+          console.log('Firestore boş, initialPeople yükleniyor...');
+          const batch = writeBatch(db);
+          initialPeople.forEach((person: Person) => {
+            const docRef = doc(db, 'people', person.id);
+            batch.set(docRef, person);
+          });
+          await batch.commit();
+          console.log('✅ initialPeople Firestore\'a yüklendi!');
+  
+          // Yükledikten sonra tekrar oku
+          const newSnapshot = await getDocs(peopleRef);
+          const loadedPeople: Person[] = [];
+          newSnapshot.forEach((docSnapshot) => {
+            loadedPeople.push(docSnapshot.data() as Person);
+          });
+          setPeople(loadedPeople);
+          setLoading(false);
+        } else {
+          // Firestore'da veri var → getir
+          const loadedPeople: Person[] = [];
+          snapshot.forEach((docSnapshot) => {
+            loadedPeople.push(docSnapshot.data() as Person);
+          });
+          setPeople(loadedPeople);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error('Firestore yükleme hatası:', error);
+        setLoading(false);
+      }
+    };
+  
+    loadData();
+  }, []);
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleSave();
@@ -371,23 +413,42 @@ function App() {
   const [showFemales, setShowFemales] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [people, setPeople] = useState<Person[]>([]);
+  const [loading, setLoading] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const [people, setPeople] = useState<Person[]>(() => {
-    try {
-      const saved = localStorage.getItem('peopleData');
-      if (saved) {
-        return JSON.parse(saved);
-      }
-    } catch {
-      // Yoksay
-    }
-    return initialPeople;
-  });
-
+  // ============================================================
+  // FIRESTORE'DAN VERİ ÇEKME (GERÇEK ZAMANLI)
+  // ============================================================
   useEffect(() => {
-    localStorage.setItem('peopleData', JSON.stringify(people));
-  }, [people]);
+    const peopleRef = collection(db, 'people');
+
+    // İlk açılışta Firestore boşsa, initialPeople'ı yükle
+    const unsubscribe = onSnapshot(peopleRef, (snapshot) => {
+      if (snapshot.empty) {
+        // Firestore boş → initialPeople'ı yükle
+        console.log('Firestore boş, initialPeople yükleniyor...');
+        const batch = writeBatch(db);
+        initialPeople.forEach((person: Person) => {
+          const docRef = doc(db, 'people', person.id);
+          batch.set(docRef, person);
+        });
+        batch.commit().then(() => {
+          console.log('✅ initialPeople Firestore\'a yüklendi!');
+        });
+      } else {
+        // Firestore'da veri var → getir
+        const loadedPeople: Person[] = [];
+        snapshot.forEach((docSnapshot) => {
+          loadedPeople.push(docSnapshot.data() as Person);
+        });
+        setPeople(loadedPeople);
+        setLoading(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const fullTree = buildTreeFromPeople(people);
   const treeData = showFemales ? fullTree : removeFemales(fullTree);
@@ -407,17 +468,34 @@ function App() {
     ? findAllDescendants(people, selectedPerson.id)
     : [];
 
-  const updatePerson = (field: keyof Person, value: string) => {
-    if (!selectedId) return;
-    setPeople((prev) =>
-      prev.map((p) => (p.id === selectedId ? { ...p, [field]: value } : p))
-    );
-    setSelectedMember((prev: any) =>
-      prev ? { ...prev, [field]: value } : null
-    );
+  // ============================================================
+  // KİŞİYİ GÜNCELLE (FIRESTORE'A KAYDET)
+  // ============================================================
+  const updatePerson = async (field: keyof Person, value: string) => {
+    if (!selectedId || !selectedPerson) return;
+
+    const updatedPerson = { ...selectedPerson, [field]: value };
+
+    // Firestore'a kaydet
+    try {
+      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+      // Yerel state'i de güncelle
+      setPeople((prev) =>
+        prev.map((p) => (p.id === selectedId ? updatedPerson : p))
+      );
+      setSelectedMember((prev: any) =>
+        prev ? { ...prev, [field]: value } : null
+      );
+    } catch (error) {
+      console.error('Firestore güncelleme hatası:', error);
+      alert('❌ Kaydetme başarısız!');
+    }
   };
 
-  const handleAddChild = (data: {
+  // ============================================================
+  // YENİ ÇOCUK EKLE (FIRESTORE'A KAYDET)
+  // ============================================================
+  const handleAddChild = async (data: {
     name: string;
     gender: 'male' | 'female';
     dogumYili: string;
@@ -443,22 +521,43 @@ function App() {
       notFlag: false,
     };
 
-    setPeople((prev) => [...prev, newPerson]);
-    setShowAddForm(false);
-    alert(`✅ "${data.name}" başarıyla eklendi!`);
+    try {
+      await setDoc(doc(db, 'people', newId), newPerson);
+      setShowAddForm(false);
+      alert(`✅ "${data.name}" başarıyla eklendi!`);
+    } catch (error) {
+      console.error('Firestore ekleme hatası:', error);
+      alert('❌ Ekleme başarısız!');
+    }
   };
 
-  const handleDeleteConfirm = () => {
+  // ============================================================
+  // KİŞİ SİL (FIRESTORE'DAN SİL)
+  // ============================================================
+  const handleDeleteConfirm = async () => {
     if (!selectedPerson) return;
 
     const idsToDelete = [selectedPerson.id, ...descendants];
-    setPeople((prev) => prev.filter((p) => !idsToDelete.includes(p.id)));
 
-    setShowDeleteConfirm(false);
-    setSelectedMember(null);
-    alert(`🗑️ ${idsToDelete.length} kişi silindi.`);
+    try {
+      const batch = writeBatch(db);
+      idsToDelete.forEach((id) => {
+        batch.delete(doc(db, 'people', id));
+      });
+      await batch.commit();
+
+      setShowDeleteConfirm(false);
+      setSelectedMember(null);
+      alert(`🗑️ ${idsToDelete.length} kişi silindi.`);
+    } catch (error) {
+      console.error('Firestore silme hatası:', error);
+      alert('❌ Silme başarısız!');
+    }
   };
 
+  // ============================================================
+  // JSON İNDİR
+  // ============================================================
   const handleExport = () => {
     const exportData = {
       version: '2.0',
@@ -480,16 +579,19 @@ function App() {
     URL.revokeObjectURL(url);
   };
 
+  // ============================================================
+  // JSON YÜKLE (FIRESTORE'A TOPLU YÜKLE)
+  // ============================================================
   const handleImportClick = () => {
     fileInputRef.current?.click();
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = (event) => {
+    reader.onload = async (event) => {
       try {
         const content = event.target?.result as string;
         const importedData = JSON.parse(content);
@@ -501,7 +603,14 @@ function App() {
           return;
         }
 
-        setPeople(importedData.people);
+        // Firestore'a toplu yükle
+        const batch = writeBatch(db);
+        importedData.people.forEach((person: Person) => {
+          const docRef = doc(db, 'people', person.id);
+          batch.set(docRef, person);
+        });
+        await batch.commit();
+
         setSelectedMember(null);
         alert(`✅ Başarıyla yüklendi! ${importedData.people.length} kişi.`);
       } catch (err) {
@@ -513,6 +622,9 @@ function App() {
     e.target.value = '';
   };
 
+  // ============================================================
+  // ÖZEL KUTUCUK
+  // ============================================================
   const renderCustomNode = ({ nodeDatum }: any) => {
     const isFemale = nodeDatum.gender === 'female';
 
@@ -584,6 +696,24 @@ function App() {
       </g>
     );
   };
+
+  // Yükleniyor ekranı
+  if (loading) {
+    return (
+      <div className="app-container">
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          fontSize: '18px',
+          color: '#C0622A',
+        }}>
+          ⏳ Veriler yükleniyor...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="app-container">
