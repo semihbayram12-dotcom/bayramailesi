@@ -166,47 +166,14 @@ function EditableField({ value, placeholder, onSave }: EditableFieldProps) {
   const [tempValue, setTempValue] = useState(value);
 
   useEffect(() => {
-    const loadData = async () => {
-      try {
-        const peopleRef = collection(db, 'people');
-        const snapshot = await getDocs(peopleRef);
-  
-        if (snapshot.empty) {
-          // Firestore boş → initialPeople'ı yükle
-          console.log('Firestore boş, initialPeople yükleniyor...');
-          const batch = writeBatch(db);
-          initialPeople.forEach((person: Person) => {
-            const docRef = doc(db, 'people', person.id);
-            batch.set(docRef, person);
-          });
-          await batch.commit();
-          console.log('✅ initialPeople Firestore\'a yüklendi!');
-  
-          // Yükledikten sonra tekrar oku
-          const newSnapshot = await getDocs(peopleRef);
-          const loadedPeople: Person[] = [];
-          newSnapshot.forEach((docSnapshot) => {
-            loadedPeople.push(docSnapshot.data() as Person);
-          });
-          setPeople(loadedPeople);
-          setLoading(false);
-        } else {
-          // Firestore'da veri var → getir
-          const loadedPeople: Person[] = [];
-          snapshot.forEach((docSnapshot) => {
-            loadedPeople.push(docSnapshot.data() as Person);
-          });
-          setPeople(loadedPeople);
-          setLoading(false);
-        }
-      } catch (error) {
-        console.error('Firestore yükleme hatası:', error);
-        setLoading(false);
-      }
-    };
-  
-    loadData();
-  }, []);
+    setTempValue(value);
+  }, [value]);
+
+  const handleSave = () => {
+    onSave(tempValue);
+    setIsEditing(false);
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleSave();
@@ -369,7 +336,10 @@ function DeleteConfirm({
 }: DeleteConfirmProps) {
   return (
     <div className="modal-overlay" onClick={onCancel}>
-      <div className="modal-content delete-modal" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modal-content delete-modal"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal-header">
           <h3>🗑️ Kişiyi Sil</h3>
           <button className="modal-close" onClick={onCancel}>
@@ -418,36 +388,49 @@ function App() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // ============================================================
-  // FIRESTORE'DAN VERİ ÇEKME (GERÇEK ZAMANLI)
+  // FIRESTORE'DAN VERİ ÇEKME (getDocs ile)
   // ============================================================
   useEffect(() => {
-    const peopleRef = collection(db, 'people');
+    const loadData = async () => {
+      try {
+        const peopleRef = collection(db, 'people');
+        const snapshot = await getDocs(peopleRef);
 
-    // İlk açılışta Firestore boşsa, initialPeople'ı yükle
-    const unsubscribe = onSnapshot(peopleRef, (snapshot) => {
-      if (snapshot.empty) {
-        // Firestore boş → initialPeople'ı yükle
-        console.log('Firestore boş, initialPeople yükleniyor...');
-        const batch = writeBatch(db);
-        initialPeople.forEach((person: Person) => {
-          const docRef = doc(db, 'people', person.id);
-          batch.set(docRef, person);
-        });
-        batch.commit().then(() => {
+        if (snapshot.empty) {
+          // Firestore boş → initialPeople'ı yükle
+          console.log('Firestore boş, initialPeople yükleniyor...');
+          const batch = writeBatch(db);
+          initialPeople.forEach((person: Person) => {
+            const docRef = doc(db, 'people', person.id);
+            batch.set(docRef, person);
+          });
+          await batch.commit();
           console.log('✅ initialPeople Firestore\'a yüklendi!');
-        });
-      } else {
-        // Firestore'da veri var → getir
-        const loadedPeople: Person[] = [];
-        snapshot.forEach((docSnapshot) => {
-          loadedPeople.push(docSnapshot.data() as Person);
-        });
-        setPeople(loadedPeople);
+
+          // Yükledikten sonra tekrar oku
+          const newSnapshot = await getDocs(peopleRef);
+          const loadedPeople: Person[] = [];
+          newSnapshot.forEach((docSnapshot) => {
+            loadedPeople.push(docSnapshot.data() as Person);
+          });
+          setPeople(loadedPeople);
+          setLoading(false);
+        } else {
+          // Firestore'da veri var → getir
+          const loadedPeople: Person[] = [];
+          snapshot.forEach((docSnapshot) => {
+            loadedPeople.push(docSnapshot.data() as Person);
+          });
+          setPeople(loadedPeople);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error('Firestore yükleme hatası:', error);
         setLoading(false);
       }
-    });
+    };
 
-    return () => unsubscribe();
+    loadData();
   }, []);
 
   const fullTree = buildTreeFromPeople(people);
@@ -476,10 +459,8 @@ function App() {
 
     const updatedPerson = { ...selectedPerson, [field]: value };
 
-    // Firestore'a kaydet
     try {
       await setDoc(doc(db, 'people', selectedId), updatedPerson);
-      // Yerel state'i de güncelle
       setPeople((prev) =>
         prev.map((p) => (p.id === selectedId ? updatedPerson : p))
       );
@@ -523,6 +504,7 @@ function App() {
 
     try {
       await setDoc(doc(db, 'people', newId), newPerson);
+      setPeople((prev) => [...prev, newPerson]);
       setShowAddForm(false);
       alert(`✅ "${data.name}" başarıyla eklendi!`);
     } catch (error) {
@@ -546,6 +528,7 @@ function App() {
       });
       await batch.commit();
 
+      setPeople((prev) => prev.filter((p) => !idsToDelete.includes(p.id)));
       setShowDeleteConfirm(false);
       setSelectedMember(null);
       alert(`🗑️ ${idsToDelete.length} kişi silindi.`);
@@ -603,13 +586,21 @@ function App() {
           return;
         }
 
-        // Firestore'a toplu yükle
         const batch = writeBatch(db);
         importedData.people.forEach((person: Person) => {
           const docRef = doc(db, 'people', person.id);
           batch.set(docRef, person);
         });
         await batch.commit();
+
+        // Yeniden yükle
+        const peopleRef = collection(db, 'people');
+        const snapshot = await getDocs(peopleRef);
+        const loadedPeople: Person[] = [];
+        snapshot.forEach((docSnapshot) => {
+          loadedPeople.push(docSnapshot.data() as Person);
+        });
+        setPeople(loadedPeople);
 
         setSelectedMember(null);
         alert(`✅ Başarıyla yüklendi! ${importedData.people.length} kişi.`);
@@ -701,14 +692,16 @@ function App() {
   if (loading) {
     return (
       <div className="app-container">
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100vh',
-          fontSize: '18px',
-          color: '#C0622A',
-        }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            fontSize: '18px',
+            color: '#C0622A',
+          }}
+        >
           ⏳ Veriler yükleniyor...
         </div>
       </div>
