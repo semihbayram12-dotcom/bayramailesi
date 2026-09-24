@@ -9,7 +9,6 @@ import {
   collection,
   doc,
   setDoc,
-  deleteDoc,
   getDocs,
   writeBatch,
 } from 'firebase/firestore';
@@ -385,7 +384,6 @@ function App() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(true);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // ============================================================
   // FIRESTORE'DAN VERİ ÇEKME (getDocs ile)
@@ -397,7 +395,6 @@ function App() {
         const snapshot = await getDocs(peopleRef);
 
         if (snapshot.empty) {
-          // Firestore boş → initialPeople'ı yükle
           console.log('Firestore boş, initialPeople yükleniyor...');
           const batch = writeBatch(db);
           initialPeople.forEach((person: Person) => {
@@ -407,7 +404,6 @@ function App() {
           await batch.commit();
           console.log('✅ initialPeople Firestore\'a yüklendi!');
 
-          // Yükledikten sonra tekrar oku
           const newSnapshot = await getDocs(peopleRef);
           const loadedPeople: Person[] = [];
           newSnapshot.forEach((docSnapshot) => {
@@ -416,7 +412,6 @@ function App() {
           setPeople(loadedPeople);
           setLoading(false);
         } else {
-          // Firestore'da veri var → getir
           const loadedPeople: Person[] = [];
           snapshot.forEach((docSnapshot) => {
             loadedPeople.push(docSnapshot.data() as Person);
@@ -452,7 +447,7 @@ function App() {
     : [];
 
   // ============================================================
-  // KİŞİYİ GÜNCELLE (FIRESTORE'A KAYDET)
+  // KİŞİYİ GÜNCELLE
   // ============================================================
   const updatePerson = async (field: keyof Person, value: string) => {
     if (!selectedId || !selectedPerson) return;
@@ -474,7 +469,7 @@ function App() {
   };
 
   // ============================================================
-  // YENİ ÇOCUK EKLE (FIRESTORE'A KAYDET)
+  // YENİ ÇOCUK EKLE
   // ============================================================
   const handleAddChild = async (data: {
     name: string;
@@ -514,7 +509,7 @@ function App() {
   };
 
   // ============================================================
-  // KİŞİ SİL (FIRESTORE'DAN SİL)
+  // KİŞİ SİL
   // ============================================================
   const handleDeleteConfirm = async () => {
     if (!selectedPerson) return;
@@ -539,9 +534,9 @@ function App() {
   };
 
   // ============================================================
-  // JSON İNDİR
+  // YEDEK AL (JSON İNDİR)
   // ============================================================
-  const handleExport = () => {
+  const handleBackup = () => {
     const exportData = {
       version: '2.0',
       exportDate: new Date().toISOString(),
@@ -555,62 +550,13 @@ function App() {
     const link = document.createElement('a');
     link.href = url;
     const date = new Date().toISOString().split('T')[0];
-    link.download = `bayram-ailesi-${date}.json`;
+    link.download = `bayram-ailesi-yedek-${date}.json`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
-  };
 
-  // ============================================================
-  // JSON YÜKLE (FIRESTORE'A TOPLU YÜKLE)
-  // ============================================================
-  const handleImportClick = () => {
-    fileInputRef.current?.click();
-  };
-
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = async (event) => {
-      try {
-        const content = event.target?.result as string;
-        const importedData = JSON.parse(content);
-
-        if (!importedData.people || !Array.isArray(importedData.people)) {
-          alert(
-            'Geçersiz JSON dosyası! Bu dosya bu uygulamadan dışa aktarılmamış olabilir.'
-          );
-          return;
-        }
-
-        const batch = writeBatch(db);
-        importedData.people.forEach((person: Person) => {
-          const docRef = doc(db, 'people', person.id);
-          batch.set(docRef, person);
-        });
-        await batch.commit();
-
-        // Yeniden yükle
-        const peopleRef = collection(db, 'people');
-        const snapshot = await getDocs(peopleRef);
-        const loadedPeople: Person[] = [];
-        snapshot.forEach((docSnapshot) => {
-          loadedPeople.push(docSnapshot.data() as Person);
-        });
-        setPeople(loadedPeople);
-
-        setSelectedMember(null);
-        alert(`✅ Başarıyla yüklendi! ${importedData.people.length} kişi.`);
-      } catch (err) {
-        alert('❌ JSON dosyası okunamadı!');
-        console.error(err);
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = '';
+    alert(`✅ Yedek alındı! ${people.length} kişi kaydedildi.`);
   };
 
   // ============================================================
@@ -688,7 +634,6 @@ function App() {
     );
   };
 
-  // Yükleniyor ekranı
   if (loading) {
     return (
       <div className="app-container">
@@ -740,24 +685,13 @@ function App() {
             {showFemales ? 'Kız Çocukları Gizle' : 'Kız Çocukları Göster'}
           </button>
 
-          <button className="toggle-button export" onClick={handleExport}>
-            📥 İndir
-          </button>
-
           <button
-            className="toggle-button import"
-            onClick={handleImportClick}
+            className="toggle-button backup"
+            onClick={handleBackup}
+            title="Tüm verileri JSON olarak yedekle"
           >
-            📤 Yükle
+            💾 Yedek Al
           </button>
-
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept=".json"
-            onChange={handleFileChange}
-            style={{ display: 'none' }}
-          />
         </div>
       </header>
 
