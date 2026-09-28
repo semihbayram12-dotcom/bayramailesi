@@ -133,7 +133,7 @@ function findPersonById(root: any, targetId: string): any {
 }
 
 // ============================================================
-// BİR KİŞİNİN TÜM ALT NESİLLERİNİ BUL (RECURSIVE)
+// BİR KİŞİNİN TÜM ALT NESİLLERİNİ BUL
 // ============================================================
 function findAllDescendants(people: Person[], rootId: string): string[] {
   const descendants: string[] = [];
@@ -386,7 +386,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   // ============================================================
-  // FIRESTORE'DAN VERİ ÇEKME (getDocs ile)
+  // FIRESTORE'DAN VERİ ÇEKME
   // ============================================================
   useEffect(() => {
     const loadData = async () => {
@@ -395,14 +395,12 @@ function App() {
         const snapshot = await getDocs(peopleRef);
 
         if (snapshot.empty) {
-          console.log('Firestore boş, initialPeople yükleniyor...');
           const batch = writeBatch(db);
           initialPeople.forEach((person: Person) => {
             const docRef = doc(db, 'people', person.id);
             batch.set(docRef, person);
           });
           await batch.commit();
-          console.log('✅ initialPeople Firestore\'a yüklendi!');
 
           const newSnapshot = await getDocs(peopleRef);
           const loadedPeople: Person[] = [];
@@ -410,15 +408,14 @@ function App() {
             loadedPeople.push(docSnapshot.data() as Person);
           });
           setPeople(loadedPeople);
-          setLoading(false);
         } else {
           const loadedPeople: Person[] = [];
           snapshot.forEach((docSnapshot) => {
             loadedPeople.push(docSnapshot.data() as Person);
           });
           setPeople(loadedPeople);
-          setLoading(false);
         }
+        setLoading(false);
       } catch (error) {
         console.error('Firestore yükleme hatası:', error);
         setLoading(false);
@@ -446,9 +443,6 @@ function App() {
     ? findAllDescendants(people, selectedPerson.id)
     : [];
 
-  // ============================================================
-  // KİŞİYİ GÜNCELLE
-  // ============================================================
   const updatePerson = async (field: keyof Person, value: string) => {
     if (!selectedId || !selectedPerson) return;
 
@@ -468,9 +462,6 @@ function App() {
     }
   };
 
-  // ============================================================
-  // YENİ ÇOCUK EKLE
-  // ============================================================
   const handleAddChild = async (data: {
     name: string;
     gender: 'male' | 'female';
@@ -508,9 +499,6 @@ function App() {
     }
   };
 
-  // ============================================================
-  // KİŞİ SİL
-  // ============================================================
   const handleDeleteConfirm = async () => {
     if (!selectedPerson) return;
 
@@ -533,9 +521,6 @@ function App() {
     }
   };
 
-  // ============================================================
-  // YEDEK AL (JSON İNDİR)
-  // ============================================================
   const handleBackup = () => {
     const exportData = {
       version: '2.0',
@@ -559,9 +544,6 @@ function App() {
     alert(`✅ Yedek alındı! ${people.length} kişi kaydedildi.`);
   };
 
-  // ============================================================
-  // ÖZEL KUTUCUK
-  // ============================================================
   const renderCustomNode = ({ nodeDatum }: any) => {
     const isFemale = nodeDatum.gender === 'female';
 
@@ -575,16 +557,16 @@ function App() {
       normalizeText(nodeDatum.name).includes(normalizeText(searchTerm));
 
     const bgColor = isMatch
-      ? '#A5D6A7'
+      ? '#FFB74D'
       : isFemale
       ? '#F48FB1'
-      : '#F5B183';
+      : '#80DEEA';
 
     const strokeColor = isMatch
-      ? '#2E7D32'
+      ? '#E65100'
       : isFemale
       ? '#AD1457'
-      : '#C0622A';
+      : '#00838F';
 
     return (
       <g
@@ -644,7 +626,7 @@ function App() {
             alignItems: 'center',
             height: '100vh',
             fontSize: '18px',
-            color: '#C0622A',
+            color: '#00695C',
           }}
         >
           ⏳ Veriler yükleniyor...
@@ -700,11 +682,11 @@ function App() {
           data={treeData}
           orientation="horizontal"
           pathFunc="step"
-          translate={{ x: 150, y: 200 }}
+          translate={{ x: 100, y: 400 }}
           zoomable={true}
           panable={true}
           separation={{ siblings: 1, nonSiblings: 1.5 }}
-          nodeSize={{ x: 160, y: 60 }}
+          nodeSize={{ x: 360, y: 60 }}
           scaleExtent={{ min: 0.1, max: 2 }}
           renderCustomNodeElement={renderCustomNode}
         />

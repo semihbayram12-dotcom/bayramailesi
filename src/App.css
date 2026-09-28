@@ -27,7 +27,7 @@
    
    body {
      font-family: Arial, Helvetica, sans-serif;
-     background-color: #d3d3d3;
+     background-color: #E0F2F1;
      overflow: hidden;
    }
    
@@ -43,7 +43,7 @@
    }
    
    /* ============================================
-      ÜST BAŞLIK
+      ÜST BAŞLIK - TURKUAZ GRADIENT
       ============================================ */
    .app-header {
      display: grid;
@@ -51,7 +51,7 @@
      align-items: center;
      gap: 12px;
      padding: 10px 20px;
-     background: linear-gradient(135deg, #E65100, #F57C00);
+     background: linear-gradient(135deg, #00695C, #00897B);
      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
      flex-shrink: 0;
      min-height: 55px;
@@ -67,14 +67,14 @@
    
    .search-label {
      font-weight: bold;
-     color: #000;
+     color: #ffffff;
      font-size: 13px;
    }
    
    .search-input {
      padding: 5px 10px;
      font-size: 13px;
-     border: 2px solid #C0622A;
+     border: 2px solid #00838F;
      border-radius: 6px;
      outline: none;
      width: 150px;
@@ -82,14 +82,14 @@
    }
    
    .search-input:focus {
-     border-color: #8B4513;
-     box-shadow: 0 0 0 3px rgba(192, 98, 42, 0.2);
+     border-color: #00695C;
+     box-shadow: 0 0 0 3px rgba(0, 131, 143, 0.2);
    }
    
    .clear-button {
      padding: 4px 8px;
      font-size: 12px;
-     background: #8B4513;
+     background: #00695C;
      color: white;
      border: none;
      border-radius: 4px;
@@ -101,7 +101,7 @@
      font-size: 20px;
      font-weight: bold;
      letter-spacing: 2px;
-     color: #000;
+     color: #ffffff;
      white-space: nowrap;
      overflow: hidden;
      text-overflow: ellipsis;
@@ -112,15 +112,16 @@
      align-items: center;
      justify-content: flex-end;
      white-space: nowrap;
+     gap: 6px;
    }
    
    .toggle-button {
      padding: 6px 12px;
      font-size: 12px;
      font-weight: 600;
-     background-color: #fff;
-     color: #C0622A;
-     border: 2px solid #C0622A;
+     background-color: #ffffff;
+     color: #00695C;
+     border: 2px solid #00695C;
      border-radius: 6px;
      cursor: pointer;
      white-space: nowrap;
@@ -128,8 +129,19 @@
    }
    
    .toggle-button:hover {
-     background-color: #C0622A;
+     background-color: #00695C;
+     color: #ffffff;
+   }
+   
+   .toggle-button.backup {
+     background-color: #FF9800;
      color: #fff;
+     border-color: #FF9800;
+   }
+   
+   .toggle-button.backup:hover {
+     background-color: #F57C00;
+     border-color: #F57C00;
    }
    
    /* ============================================
@@ -138,7 +150,7 @@
    .app-canvas {
      flex: 1;
      width: 100%;
-     background-color: #d3d3d3;
+     background-color: #E0F2F1;
      overflow: hidden;
      position: relative;
    }
@@ -146,7 +158,7 @@
    svg text {
      font-family: 'Arial', 'Helvetica', sans-serif !important;
      font-size: 16px !important;
-     font-weight: 100 !important;
+     font-weight: 500 !important;
      fill: #000000 !important;
      font-synthesis: none !important;
      -webkit-text-stroke: 0 !important;
@@ -164,7 +176,7 @@
      max-height: calc(100vh - 100px);
      background: #fff;
      border-radius: 16px;
-     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+     box-shadow: 0 10px 40px rgba(0, 105, 92, 0.25);
      overflow-y: auto;
      z-index: 100;
      padding: 20px;
@@ -186,20 +198,20 @@
    .photo-placeholder {
      width: 100%;
      height: 100%;
-     border: 2px dashed #C0622A;
+     border: 2px dashed #00695C;
      border-radius: 12px;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
-     background: #FFF8F0;
+     background: #E0F2F1;
      cursor: pointer;
      transition: all 0.2s;
    }
    
    .photo-placeholder:hover {
-     background: #FFE8D0;
-     border-color: #8B4513;
+     background: #B2DFDB;
+     border-color: #00897B;
    }
    
    .photo-placeholder span {
@@ -209,7 +221,7 @@
    
    .photo-placeholder small {
      font-size: 10px;
-     color: #8B4513;
+     color: #00695C;
    }
    
    .close-button {
@@ -229,11 +241,11 @@
    .person-name {
      font-size: 24px;
      font-weight: bold;
-     color: #1a237e;
+     color: #00695C;
      text-align: center;
      margin-bottom: 20px;
      padding-bottom: 12px;
-     border-bottom: 2px solid #F5B183;
+     border-bottom: 2px solid #80DEEA;
    }
    
    .card-section {
@@ -243,7 +255,7 @@
    .section-title {
      font-size: 13px;
      font-weight: bold;
-     color: #C0622A;
+     color: #00838F;
      margin-bottom: 8px;
      letter-spacing: 0.5px;
    }
@@ -251,10 +263,10 @@
    .lineage-text {
      font-size: 13px;
      color: #333;
-     background: #FFF8F0;
+     background: #E0F2F1;
      padding: 10px 12px;
      border-radius: 8px;
-     border-left: 3px solid #C0622A;
+     border-left: 3px solid #00897B;
      line-height: 1.5;
      word-break: break-word;
    }
@@ -284,7 +296,7 @@
    }
    
    .info-value {
-     color: #1a237e;
+     color: #00695C;
      text-align: right;
      flex: 1;
      word-break: break-word;
@@ -298,7 +310,7 @@
    }
    
    .info-value.editable:hover {
-     background: #e8f0fe;
+     background: #E0F2F1;
    }
    
    .info-value.empty {
@@ -307,23 +319,34 @@
      font-weight: normal;
    }
    
+   .info-value.auto {
+     color: #2E7D32;
+     font-weight: 600;
+     text-align: right;
+     flex: 1;
+     padding: 4px 8px;
+     background: #E8F5E9;
+     border-radius: 4px;
+     font-style: normal;
+   }
+   
    /* Düzenlenebilir input */
    .editable-input {
      flex: 1;
      padding: 4px 8px;
      font-size: 13px;
-     border: 2px solid #C0622A;
+     border: 2px solid #00897B;
      border-radius: 4px;
      outline: none;
-     color: #1a237e;
+     color: #00695C;
      background: #fff;
      text-align: right;
      font-family: Arial, Helvetica, sans-serif;
    }
    
    .editable-input:focus {
-     border-color: #8B4513;
-     box-shadow: 0 0 0 2px rgba(192, 98, 42, 0.2);
+     border-color: #00695C;
+     box-shadow: 0 0 0 2px rgba(0, 137, 123, 0.2);
    }
    
    /* ÇOCUKLAR */
@@ -343,13 +366,13 @@
    }
    
    .child-chip.male {
-     background: #FFF3E0;
-     color: #C0622A;
+     background: #B2EBF2;
+     color: #00695C;
    }
    
    .child-chip.female {
-     background: #E3F2FD;
-     color: #1565C0;
+     background: #F8BBD0;
+     color: #AD1457;
    }
    
    .empty-text {
@@ -365,9 +388,9 @@
      padding: 8px;
      font-size: 12px;
      font-weight: 600;
-     background: #FFF8F0;
-     color: #C0622A;
-     border: 2px dashed #C0622A;
+     background: #E0F2F1;
+     color: #00695C;
+     border: 2px dashed #00695C;
      border-radius: 8px;
      cursor: pointer;
      transition: all 0.2s;
@@ -375,7 +398,7 @@
    }
    
    .add-button:hover {
-     background: #FFE8D0;
+     background: #B2DFDB;
      border-style: solid;
    }
    
@@ -394,6 +417,33 @@
      text-align: left;
    }
    
+   /* SİLME BUTONU */
+   .card-actions {
+     display: flex;
+     gap: 8px;
+     margin-top: 16px;
+     padding-top: 16px;
+     border-top: 1px solid #eee;
+   }
+   
+   .delete-button {
+     width: 100%;
+     padding: 10px;
+     font-size: 14px;
+     font-weight: 600;
+     background: #FFEBEE;
+     color: #C62828;
+     border: 2px solid #EF5350;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: all 0.2s;
+   }
+   
+   .delete-button:hover {
+     background: #EF5350;
+     color: #fff;
+   }
+   
    /* ============================================
       SCROLLBAR
       ============================================ */
@@ -406,7 +456,7 @@
    }
    
    .person-card::-webkit-scrollbar-thumb {
-     background: #C0622A;
+     background: #00897B;
      border-radius: 3px;
    }
    
@@ -454,217 +504,236 @@
        max-height: 70vh;
      }
    }
+   
    /* ============================================
-   OTOMATİK GELEN BİLGİLER İÇİN STİL
-   ============================================ */
-.info-value.auto {
-  color: #2E7D32;
-  font-weight: 600;
-  text-align: right;
-  flex: 1;
-  padding: 4px 8px;
-  background: #E8F5E9;
-  border-radius: 4px;
-  font-style: normal;
-}/* ============================================
-   IMPORT / EXPORT BUTONLARI
-   ============================================ */
-.toggle-button.export {
-  background-color: #4CAF50;
-  color: #fff;
-  border-color: #4CAF50;
-}
-
-.toggle-button.export:hover {
-  background-color: #388E3C;
-  border-color: #388E3C;
-}
-
-.toggle-button.import {
-  background-color: #2196F3;
-  color: #fff;
-  border-color: #2196F3;
-}
-
-.toggle-button.import:hover {
-  background-color: #1976D2;
-  border-color: #1976D2;
-}
-
-/* Header butonlarını yan yana diz */
-.header-right {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-/* ============================================
-   MODAL (ÇOCUK EKLEME FORMU)
-   ============================================ */
+      MODAL (ÇOCUK EKLEME FORMU)
+      ============================================ */
    .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    width: 400px;
-    max-width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #F5B183;
-  }
-  
-  .modal-header h3 {
-    color: #C0622A;
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  .modal-close {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #999;
-    padding: 0 8px;
-  }
-  
-  .modal-close:hover {
-    color: #d32f2f;
-  }
-  
-  .modal-subtitle {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-  
-  .modal-subtitle strong {
-    color: #1a237e;
-  }
-  
-  .add-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  
-  .form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  
-  .form-row label {
-    font-size: 13px;
-    font-weight: 600;
-    color: #555;
-  }
-  
-  .form-row input[type="text"] {
-    padding: 8px 12px;
-    font-size: 14px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    outline: none;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .form-row input[type="text"]:focus {
-    border-color: #C0622A;
-    box-shadow: 0 0 0 3px rgba(192, 98, 42, 0.15);
-  }
-  
-  .gender-options {
-    display: flex;
-    gap: 12px;
-  }
-  
-  .gender-option {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s;
-    flex: 1;
-  }
-  
-  .gender-option:hover {
-    background: #FFF8F0;
-    border-color: #C0622A;
-  }
-  
-  .gender-option input[type="radio"] {
-    accent-color: #C0622A;
-  }
-  
-  .gender-option span {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .form-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 8px;
-    padding-top: 12px;
-    border-top: 1px solid #eee;
-  }
-  
-  .btn-cancel,
-  .btn-submit {
-    flex: 1;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  
-  .btn-cancel {
-    background: #f0f0f0;
-    color: #555;
-    border: 2px solid #ddd;
-  }
-  
-  .btn-cancel:hover {
-    background: #e0e0e0;
-  }
-  
-  .btn-submit {
-    background: linear-gradient(135deg, #E65100, #F57C00);
-    color: #fff;
-    border: none;
-  }
-  
-  .btn-submit:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
-  }
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+   }
+   
+   .modal-content {
+     background: #fff;
+     border-radius: 12px;
+     box-shadow: 0 10px 40px rgba(0, 105, 92, 0.3);
+     width: 400px;
+     max-width: 90%;
+     max-height: 90vh;
+     overflow-y: auto;
+     padding: 20px;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 8px;
+     padding-bottom: 12px;
+     border-bottom: 2px solid #80DEEA;
+   }
+   
+   .modal-header h3 {
+     color: #00695C;
+     font-size: 18px;
+     margin: 0;
+   }
+   
+   .modal-close {
+     background: none;
+     border: none;
+     font-size: 20px;
+     cursor: pointer;
+     color: #999;
+     padding: 0 8px;
+   }
+   
+   .modal-close:hover {
+     color: #d32f2f;
+   }
+   
+   .modal-subtitle {
+     font-size: 13px;
+     color: #666;
+     margin-bottom: 16px;
+     text-align: center;
+   }
+   
+   .modal-subtitle strong {
+     color: #00695C;
+   }
+   
+   .add-form {
+     display: flex;
+     flex-direction: column;
+     gap: 14px;
+   }
+   
+   .form-row {
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+   }
+   
+   .form-row label {
+     font-size: 13px;
+     font-weight: 600;
+     color: #555;
+   }
+   
+   .form-row input[type="text"] {
+     padding: 8px 12px;
+     font-size: 14px;
+     border: 2px solid #ddd;
+     border-radius: 6px;
+     outline: none;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   .form-row input[type="text"]:focus {
+     border-color: #00897B;
+     box-shadow: 0 0 0 3px rgba(0, 137, 123, 0.15);
+   }
+   
+   .gender-options {
+     display: flex;
+     gap: 12px;
+   }
+   
+   .gender-option {
+     display: flex;
+     align-items: center;
+     gap: 6px;
+     padding: 8px 14px;
+     border: 2px solid #ddd;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: all 0.2s;
+     flex: 1;
+   }
+   
+   .gender-option:hover {
+     background: #E0F2F1;
+     border-color: #00897B;
+   }
+   
+   .gender-option input[type="radio"] {
+     accent-color: #00897B;
+   }
+   
+   .gender-option span {
+     font-size: 14px;
+     font-weight: 500;
+     color: #333;
+   }
+   
+   .form-actions {
+     display: flex;
+     gap: 10px;
+     margin-top: 8px;
+     padding-top: 12px;
+     border-top: 1px solid #eee;
+   }
+   
+   .btn-cancel,
+   .btn-submit {
+     flex: 1;
+     padding: 10px;
+     font-size: 14px;
+     font-weight: 600;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: all 0.2s;
+   }
+   
+   .btn-cancel {
+     background: #f0f0f0;
+     color: #555;
+     border: 2px solid #ddd;
+   }
+   
+   .btn-cancel:hover {
+     background: #e0e0e0;
+   }
+   
+   .btn-submit {
+     background: linear-gradient(135deg, #00695C, #00897B);
+     color: #fff;
+     border: none;
+   }
+   
+   .btn-submit:hover {
+     transform: translateY(-1px);
+     box-shadow: 0 4px 12px rgba(0, 105, 92, 0.3);
+   }
+   
+   /* ============================================
+      SİLME ONAY MODALI
+      ============================================ */
+   .delete-modal {
+     max-width: 450px;
+   }
+   
+   .delete-warning {
+     margin: 16px 0;
+     padding: 16px;
+     background: #FFF3E0;
+     border-left: 4px solid #FF9800;
+     border-radius: 6px;
+   }
+   
+   .delete-warning p {
+     margin-bottom: 10px;
+     font-size: 14px;
+     color: #333;
+     line-height: 1.5;
+   }
+   
+   .delete-warning strong {
+     color: #00695C;
+   }
+   
+   .delete-descendants-warning {
+     padding: 10px 12px;
+     background: #FFCDD2;
+     border-radius: 6px;
+     color: #B71C1C;
+     font-size: 13px;
+     margin: 10px 0;
+     font-weight: 600;
+   }
+   
+   .delete-irreversible {
+     font-size: 12px !important;
+     color: #999 !important;
+     font-style: italic;
+     margin-top: 12px !important;
+     margin-bottom: 0 !important;
+   }
+   
+   .btn-delete {
+     flex: 1;
+     padding: 10px;
+     font-size: 14px;
+     font-weight: 600;
+     background: linear-gradient(135deg, #C62828, #EF5350);
+     color: #fff;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: all 0.2s;
+   }
+   
+   .btn-delete:hover {
+     transform: translateY(-1px);
+     box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
+   }
