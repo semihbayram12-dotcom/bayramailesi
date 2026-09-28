@@ -43,6 +43,62 @@ interface Person {
   olumYili: string;
   notlar: string;
   notFlag: boolean;
+  photoUrl?: string;
+}
+
+// ============================================================
+// FOTOĞRAFI KÜÇÜLT VE BASE64'E ÇEVİR
+// ============================================================
+function resizeImageToBase64(
+  file: File,
+  maxWidth: number = 400,
+  maxHeight: number = 400,
+  quality: number = 0.7
+): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        // Yeni boyutları hesapla (en-boy oranını koru)
+        let width = img.width;
+        let height = img.height;
+
+        if (width > height) {
+          if (width > maxWidth) {
+            height = Math.round((height * maxWidth) / width);
+            width = maxWidth;
+          }
+        } else {
+          if (height > maxHeight) {
+            width = Math.round((width * maxHeight) / height);
+            height = maxHeight;
+          }
+        }
+
+        // Canvas'a çiz
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+
+        if (!ctx) {
+          reject(new Error('Canvas oluşturulamadı'));
+          return;
+        }
+
+        ctx.drawImage(img, 0, 0, width, height);
+
+        // Base64 string'e çevir
+        const base64 = canvas.toDataURL('image/jpeg', quality);
+        resolve(base64);
+      };
+      img.onerror = () => reject(new Error('Fotoğraf yüklenemedi'));
+      img.src = e.target?.result as string;
+    };
+    reader.onerror = () => reject(new Error('Dosya okunamadı'));
+    reader.readAsDataURL(file);
+  });
 }
 
 // ============================================================
@@ -384,6 +440,8 @@ function App() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(true);
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
+  const photoInputRef = useRef<HTMLInputElement>(null);
 
   // ============================================================
   // FIRESTORE'DAN VERİ ÇEKME
@@ -459,6 +517,96 @@ function App() {
     } catch (error) {
       console.error('Firestore güncelleme hatası:', error);
       alert('❌ Kaydetme başarısız!');
+    }
+  };
+
+  // ============================================================
+  // FOTOĞRAF YÜKLE (BASE64)
+  // ============================================================
+  const handlePhotoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !selectedId || !selectedPerson) return;
+
+    // Dosya boyutu kontrolü (max 5 MB)
+    if (file.size > 5 * 1024 * 1024) {
+      alert('❌ Fotoğraf 5 MB\'dan küçük olmalı!');
+      e.target.value = '';
+      return;
+    }
+
+    // Dosya tipi kontrolü
+    if (!file.type.startsWith('image/')) {
+      alert('❌ Lütfen bir fotoğraf seçin!');
+      e.target.value = '';
+      return;
+    }
+
+    setUploadingPhoto(true);
+
+    try {
+      // Fotoğrafı küçült ve base64'e çevir (400x400, kalite %70)
+      const base64 = await resizeImageToBase64(file, 400, 400, 0.7);
+
+      // Boyut kontrolü (Firestore doküman limiti 1 MB)
+      if (base64.length > 1000000) {
+        alert(
+          '❌ Fotoğraf çok büyük! Lütfen daha küçük bir fotoğraf seçin.'
+        );
+        setUploadingPhoto(false);
+        e.target.value = '';
+        return;
+      }
+
+      // Firestore'a kaydet
+      const updatedPerson = { ...selectedPerson, photoUrl: base64 };
+      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+
+      // State'i güncelle
+      setPeople((prev) =>
+        prev.map((p) =>
+          p.id === selectedId ? { ...p, photoUrl: base64 } : p
+        )
+      );
+      setSelectedMember((prev: any) =>
+        prev ? { ...prev, photoUrl: base64 } : null
+      );
+
+      alert('✅ Fotoğraf başarıyla yüklendi!');
+    } catch (error) {
+      console.error('Fotoğraf yükleme hatası:', error);
+      alert('❌ Fotoğraf yüklenemedi!');
+    } finally {
+      setUploadingPhoto(false);
+      e.target.value = '';
+    }
+  };
+
+  // ============================================================
+  // FOTOĞRAF SİL
+  // ============================================================
+  const handlePhotoDelete = async () => {
+    if (!selectedPerson?.photoUrl || !selectedId) return;
+
+    if (!confirm('Fotoğrafı silmek istediğinizden emin misiniz?')) return;
+
+    try {
+      const updatedPerson = { ...selectedPerson };
+      delete updatedPerson.photoUrl;
+      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+
+      setPeople((prev) =>
+        prev.map((p) =>
+          p.id === selectedId ? { ...p, photoUrl: undefined } : p
+        )
+      );
+      setSelectedMember((prev: any) =>
+        prev ? { ...prev, photoUrl: undefined } : null
+      );
+
+      alert('✅ Fotoğraf silindi!');
+    } catch (error) {
+      console.error('Fotoğraf silme hatası:', error);
+      alert('❌ Fotoğraf silinemedi!');
     }
   };
 
@@ -590,11 +738,11 @@ function App() {
           textAnchor="middle"
           fill="#000000"
           fontSize="16"
-          fontWeight="100"
+          fontWeight="500"
           fontFamily="Arial, Helvetica, sans-serif"
           pointerEvents="none"
           style={{
-            fontWeight: 100,
+            fontWeight: 500,
             fontFamily: 'Arial, Helvetica, sans-serif',
             fontSynthesis: 'none',
           }}
@@ -695,12 +843,55 @@ function App() {
       {selectedPerson && (
         <div className="person-card">
           <div className="person-card-header">
-            <div className="photo-container">
-              <div className="photo-placeholder">
-                <span>📷</span>
-                <small>Fotoğraf Ekle</small>
-              </div>
-            </div>
+          <div className="photo-container">
+  {/* Fotoğraf varsa göster, yoksa placeholder */}
+  {selectedPerson.photoUrl ? (
+    <div className="photo-wrapper">
+      <img
+        src={selectedPerson.photoUrl}
+        alt={selectedPerson.name}
+        className="person-photo"
+        onClick={() => {
+          document.getElementById('photo-upload-input')?.click();
+        }}
+      />
+      <button
+        type="button"
+        className="photo-delete-btn"
+        onClick={(e) => {
+          e.stopPropagation();
+          handlePhotoDelete();
+        }}
+        title="Fotoğrafı sil"
+      >
+        ✕
+      </button>
+    </div>
+  ) : (
+    <div
+      className="photo-placeholder"
+      onClick={() => {
+        document.getElementById('photo-upload-input')?.click();
+      }}
+      style={{
+        opacity: uploadingPhoto ? 0.5 : 1,
+        cursor: uploadingPhoto ? 'wait' : 'pointer',
+      }}
+    >
+      <span>{uploadingPhoto ? '⏳' : '📷'}</span>
+      <small>{uploadingPhoto ? 'Yükleniyor...' : 'Fotoğraf Ekle'}</small>
+    </div>
+  )}
+
+  {/* INPUT HER ZAMAN RENDER EDİLİR (gizli) */}
+  <input
+    id="photo-upload-input"
+    type="file"
+    accept="image/*"
+    onChange={handlePhotoUpload}
+    style={{ display: 'none' }}
+  />
+</div>
             <button
               className="close-button"
               onClick={() => setSelectedMember(null)}
@@ -723,7 +914,11 @@ function App() {
             <div className="info-grid">
               <div className="info-row">
                 <span className="info-label">Adı:</span>
-                <span className="info-value">{selectedPerson.name}</span>
+                <EditableField
+                  value={selectedPerson.name}
+                  placeholder="İsim ekle..."
+                  onSave={(v) => updatePerson('name', v)}
+                />
               </div>
               <div className="info-row">
                 <span className="info-label">Soyadı:</span>
