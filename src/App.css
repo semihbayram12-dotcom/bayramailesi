@@ -185,14 +185,18 @@
    
    .person-card-header {
      display: flex;
-     justify-content: space-between;
-     align-items: flex-start;
+     align-items: center;
+     gap: 16px;
      margin-bottom: 16px;
+     padding-bottom: 16px;
+     border-bottom: 2px solid #80DEEA;
+     position: relative;
    }
    
    .photo-container {
      width: 100px;
      height: 100px;
+     flex-shrink: 0;
    }
    
    .photo-placeholder {
@@ -224,6 +228,32 @@
      color: #00695C;
    }
    
+   .person-name-container {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     min-width: 0;
+   }
+   
+   .person-name {
+     font-size: 22px;
+     font-weight: bold;
+     color: #00695C;
+     margin: 0 0 4px 0;
+     text-align: left;
+     word-break: break-word;
+   }
+   
+   .person-surname {
+     font-size: 14px;
+     color: #666;
+     margin: 0;
+     text-align: left;
+     font-weight: 500;
+     letter-spacing: 0.5px;
+   }
+   
    .close-button {
      background: none;
      border: none;
@@ -232,20 +262,11 @@
      color: #999;
      padding: 0 8px;
      transition: color 0.2s;
+     align-self: flex-start;
    }
    
    .close-button:hover {
      color: #d32f2f;
-   }
-   
-   .person-name {
-     font-size: 24px;
-     font-weight: bold;
-     color: #00695C;
-     text-align: center;
-     margin-bottom: 20px;
-     padding-bottom: 12px;
-     border-bottom: 2px solid #80DEEA;
    }
    
    .card-section {
@@ -330,7 +351,6 @@
      font-style: normal;
    }
    
-   /* Düzenlenebilir input */
    .editable-input {
      flex: 1;
      padding: 4px 8px;
@@ -382,7 +402,6 @@
      padding: 4px 0;
    }
    
-   /* EKLE BUTONU */
    .add-button {
      width: 100%;
      padding: 8px;
@@ -506,7 +525,7 @@
    }
    
    /* ============================================
-      MODAL (ÇOCUK EKLEME FORMU)
+      MODAL
       ============================================ */
    .modal-overlay {
      position: fixed;
@@ -737,50 +756,113 @@
      transform: translateY(-1px);
      box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
    }
+   
    /* ============================================
-   FOTOĞRAF STİLLERİ (BASE64)
-   ============================================ */
-.photo-wrapper {
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
-
-.person-photo {
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 2px solid #00695C;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.person-photo:hover {
-  border-color: #00897B;
-  box-shadow: 0 4px 12px rgba(0, 105, 92, 0.3);
-}
-
-.photo-delete-btn {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: #C62828;
-  color: white;
-  border: 2px solid white;
-  font-size: 12px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  transition: all 0.2s;
-}
-
-.photo-delete-btn:hover {
-  background: #B71C1C;
-  transform: scale(1.1);
-}
+      FOTOĞRAF STİLLERİ
+      ============================================ */
+   .photo-wrapper {
+     position: relative;
+     width: 100px;
+     height: 100px;
+   }
+   
+   .person-photo {
+     width: 100%;
+     height: 100%;
+     border-radius: 12px;
+     object-fit: cover;
+     border: 2px solid #00695C;
+     cursor: pointer;
+     transition: all 0.2s;
+   }
+   
+   .person-photo:hover {
+     border-color: #00897B;
+     box-shadow: 0 4px 12px rgba(0, 105, 92, 0.3);
+   }
+   
+   .photo-delete-btn {
+     position: absolute;
+     top: -8px;
+     right: -8px;
+     width: 24px;
+     height: 24px;
+     border-radius: 50%;
+     background: #C62828;
+     color: white;
+     border: 2px solid white;
+     font-size: 12px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0;
+     transition: all 0.2s;
+   }
+   
+   .photo-delete-btn:hover {
+     background: #B71C1C;
+     transform: scale(1.1);
+   }
+   
+   /* ============================================
+      EŞ EKLEME MODU TABLARI
+      ============================================ */
+   .spouse-mode-tabs {
+     display: flex;
+     gap: 8px;
+     margin-bottom: 16px;
+     border-bottom: 2px solid #eee;
+   }
+   
+   .spouse-mode-tab {
+     flex: 1;
+     padding: 10px;
+     font-size: 13px;
+     font-weight: 600;
+     background: transparent;
+     border: none;
+     border-bottom: 3px solid transparent;
+     color: #999;
+     cursor: pointer;
+     transition: all 0.2s;
+   }
+   
+   .spouse-mode-tab.active {
+     color: #00695C;
+     border-bottom-color: #00695C;
+   }
+   
+   .spouse-mode-tab:hover {
+     color: #00695C;
+   }
+   
+   /* ============================================
+      EŞ ARAMA SONUÇLARI
+      ============================================ */
+   .spouse-search-results {
+     max-height: 200px;
+     overflow-y: auto;
+     border: 1px solid #eee;
+     border-radius: 6px;
+     padding: 4px;
+   }
+   
+   .spouse-result-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 8px 12px;
+     cursor: pointer;
+     border-radius: 4px;
+     transition: background 0.2s;
+   }
+   
+   .spouse-result-item:hover {
+     background: #E0F2F1;
+   }
+   
+   .spouse-result-item small {
+     color: #999;
+     font-size: 11px;
+   }

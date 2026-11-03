@@ -38,7 +38,8 @@ interface Person {
   parentId: string | null;
   soyadi: string;
   anneAdi: string;
-  esAdi: string;
+  esIds?: string[];
+  esAdlari?: string[];
   dogumYili: string;
   olumYili: string;
   notlar: string;
@@ -60,7 +61,6 @@ function resizeImageToBase64(
     reader.onload = (e) => {
       const img = new Image();
       img.onload = () => {
-        // Yeni boyutları hesapla (en-boy oranını koru)
         let width = img.width;
         let height = img.height;
 
@@ -76,7 +76,6 @@ function resizeImageToBase64(
           }
         }
 
-        // Canvas'a çiz
         const canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
@@ -88,8 +87,6 @@ function resizeImageToBase64(
         }
 
         ctx.drawImage(img, 0, 0, width, height);
-
-        // Base64 string'e çevir
         const base64 = canvas.toDataURL('image/jpeg', quality);
         resolve(base64);
       };
@@ -128,7 +125,7 @@ function buildTreeFromPeople(people: Person[]): any {
 }
 
 // ============================================================
-// KIZLARI AĞAÇTAN ÇIKAR (RECURSIVE)
+// KIZLARI AĞAÇTAN ÇIKAR
 // ============================================================
 function removeFemales(node: any): any {
   if (!node) return null;
@@ -150,13 +147,16 @@ function removeFemales(node: any): any {
 // ============================================================
 // SİLSİLEYİ HESAPLA
 // ============================================================
-function getLineage(root: any, targetId: string): string[] {
-  const path: string[] = [];
+function getLineage(root: any, targetId: string): { id: string; name: string }[] {
+  const path: { id: string; name: string }[] = [];
 
-  function findPath(node: any, currentPath: string[]): boolean {
+  function findPath(
+    node: any,
+    currentPath: { id: string; name: string }[]
+  ): boolean {
     if (!node) return false;
 
-    const newPath = [...currentPath, node.name];
+    const newPath = [...currentPath, { id: node.id, name: node.name }];
 
     if (node.id === targetId) {
       path.push(...newPath);
@@ -172,20 +172,6 @@ function getLineage(root: any, targetId: string): string[] {
 
   findPath(root, []);
   return path;
-}
-
-// ============================================================
-// ID'DEN KİŞİ BUL
-// ============================================================
-function findPersonById(root: any, targetId: string): any {
-  if (!root || !targetId) return null;
-  if (root.id === targetId) return root;
-
-  for (const child of root.children || []) {
-    const found = findPersonById(child, targetId);
-    if (found) return found;
-  }
-  return null;
 }
 
 // ============================================================
@@ -260,6 +246,149 @@ function EditableField({ value, placeholder, onSave }: EditableFieldProps) {
     >
       {value || placeholder}
     </span>
+  );
+}
+
+// ============================================================
+// EŞ EKLEME FORMU
+// ============================================================
+interface AddSpouseFormProps {
+  personName: string;
+  allPeople: Person[];
+  currentPerson: Person;
+  onAdd: (data: { spouseId?: string; spouseName?: string }) => void;
+  onCancel: () => void;
+}
+
+function AddSpouseForm({
+  personName,
+  allPeople,
+  currentPerson,
+  onAdd,
+  onCancel,
+}: AddSpouseFormProps) {
+  const [mode, setMode] = useState<'search' | 'manual'>('search');
+  const [searchText, setSearchText] = useState('');
+  const [manualName, setManualName] = useState('');
+
+  const availableSpouses = allPeople.filter((p) => {
+    if (p.id === currentPerson.id) return false;
+    if (currentPerson.esIds?.includes(p.id)) return false;
+    return true;
+  });
+
+  const filteredSpouses = availableSpouses.filter((p) =>
+    normalizeText(p.name).includes(normalizeText(searchText))
+  );
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (mode === 'search') {
+      if (searchText && filteredSpouses.length > 0) {
+        onAdd({ spouseId: filteredSpouses[0].id });
+      }
+    } else {
+      if (manualName.trim()) {
+        onAdd({ spouseName: manualName.trim() });
+      }
+    }
+  };
+
+  return (
+    <div className="modal-overlay" onClick={onCancel}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-header">
+          <h3>💍 Eş Ekle</h3>
+          <button className="modal-close" onClick={onCancel}>
+            ✕
+          </button>
+        </div>
+        <div className="modal-subtitle">
+          <strong>{personName}</strong> kişisine eş ekleniyor
+        </div>
+
+        <div className="spouse-mode-tabs">
+          <button
+            type="button"
+            className={`spouse-mode-tab ${mode === 'search' ? 'active' : ''}`}
+            onClick={() => setMode('search')}
+          >
+            🔍 Ağaçtan Seç
+          </button>
+          <button
+            type="button"
+            className={`spouse-mode-tab ${mode === 'manual' ? 'active' : ''}`}
+            onClick={() => setMode('manual')}
+          >
+            ✏️ Manuel Gir
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="add-form">
+          {mode === 'search' ? (
+            <>
+              <div className="form-row">
+                <label>Ağaçta Ara:</label>
+                <input
+                  type="text"
+                  value={searchText}
+                  onChange={(e) => setSearchText(e.target.value)}
+                  placeholder="İsim yazın..."
+                  autoFocus
+                />
+              </div>
+
+              {searchText && (
+                <div className="spouse-search-results">
+                  {filteredSpouses.length === 0 ? (
+                    <div className="empty-text">Sonuç bulunamadı</div>
+                  ) : (
+                    filteredSpouses.slice(0, 5).map((spouse) => (
+                      <div
+                        key={spouse.id}
+                        className="spouse-result-item"
+                        onClick={() => onAdd({ spouseId: spouse.id })}
+                      >
+                        <span>
+                          {spouse.gender === 'female' ? '👩' : '👨'}{' '}
+                          {spouse.name}
+                        </span>
+                        <small>
+                          {spouse.soyadi && `(${spouse.soyadi})`}
+                        </small>
+                      </div>
+                    ))
+                  )}
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="form-row">
+              <label>Eş Adı:</label>
+              <input
+                type="text"
+                value={manualName}
+                onChange={(e) => setManualName(e.target.value)}
+                placeholder="Örn: HAYRİYE"
+                autoFocus
+                required
+              />
+            </div>
+          )}
+
+          <div className="form-actions">
+            <button type="button" className="btn-cancel" onClick={onCancel}>
+              İptal
+            </button>
+            {mode === 'manual' && (
+              <button type="submit" className="btn-submit">
+                ✓ Ekle
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
 
@@ -437,6 +566,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [showFemales, setShowFemales] = useState(true);
   const [showAddForm, setShowAddForm] = useState(false);
+  const [showAddSpouseForm, setShowAddSpouseForm] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(true);
@@ -493,15 +623,15 @@ function App() {
     ? getLineage(fullTree, selectedMember.id)
     : [];
 
-  const babaAdi = selectedPerson?.parentId
-    ? findPersonById(fullTree, selectedPerson.parentId)?.name || ''
-    : '';
+  const baba = selectedPerson?.parentId
+    ? people.find((p) => p.id === selectedPerson.parentId)
+    : null;
 
   const descendants = selectedPerson
     ? findAllDescendants(people, selectedPerson.id)
     : [];
 
-  const updatePerson = async (field: keyof Person, value: string) => {
+  const updatePerson = async (field: keyof Person, value: any) => {
     if (!selectedId || !selectedPerson) return;
 
     const updatedPerson = { ...selectedPerson, [field]: value };
@@ -521,20 +651,131 @@ function App() {
   };
 
   // ============================================================
-  // FOTOĞRAF YÜKLE (BASE64)
+  // EŞ EKLE
+  // ============================================================
+  const handleAddSpouse = async (data: {
+    spouseId?: string;
+    spouseName?: string;
+  }) => {
+    if (!selectedPerson) return;
+
+    const newEsIds = [...(selectedPerson.esIds || [])];
+    const newEsAdlari = [...(selectedPerson.esAdlari || [])];
+
+    if (data.spouseId) {
+      if (!newEsIds.includes(data.spouseId)) {
+        newEsIds.push(data.spouseId);
+
+        const spouse = people.find((p) => p.id === data.spouseId);
+        if (spouse) {
+          const spouseEsIds = [...(spouse.esIds || [])];
+          if (!spouseEsIds.includes(selectedPerson.id)) {
+            spouseEsIds.push(selectedPerson.id);
+            await setDoc(doc(db, 'people', spouse.id), {
+              ...spouse,
+              esIds: spouseEsIds,
+            });
+            setPeople((prev) =>
+              prev.map((p) =>
+                p.id === spouse.id ? { ...p, esIds: spouseEsIds } : p
+              )
+            );
+          }
+        }
+      }
+    } else if (data.spouseName) {
+      if (!newEsAdlari.includes(data.spouseName)) {
+        newEsAdlari.push(data.spouseName);
+      }
+    }
+
+    const updatedPerson = {
+      ...selectedPerson,
+      esIds: newEsIds,
+      esAdlari: newEsAdlari,
+    };
+
+    try {
+      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+      setPeople((prev) =>
+        prev.map((p) => (p.id === selectedId ? updatedPerson : p))
+      );
+      setSelectedMember(updatedPerson);
+      setShowAddSpouseForm(false);
+      alert('✅ Eş başarıyla eklendi!');
+    } catch (error) {
+      console.error('Eş ekleme hatası:', error);
+      alert('❌ Eş eklenemedi!');
+    }
+  };
+
+  // ============================================================
+  // EŞ SİL
+  // ============================================================
+  const handleRemoveSpouse = async (
+    spouseId?: string,
+    spouseName?: string
+  ) => {
+    if (!selectedPerson) return;
+
+    if (!confirm('Eşi silmek istediğinizden emin misiniz?')) return;
+
+    let newEsIds = [...(selectedPerson.esIds || [])];
+    let newEsAdlari = [...(selectedPerson.esAdlari || [])];
+
+    if (spouseId) {
+      newEsIds = newEsIds.filter((id) => id !== spouseId);
+
+      const spouse = people.find((p) => p.id === spouseId);
+      if (spouse) {
+        const spouseEsIds = (spouse.esIds || []).filter(
+          (id) => id !== selectedPerson.id
+        );
+        await setDoc(doc(db, 'people', spouse.id), {
+          ...spouse,
+          esIds: spouseEsIds,
+        });
+        setPeople((prev) =>
+          prev.map((p) =>
+            p.id === spouse.id ? { ...p, esIds: spouseEsIds } : p
+          )
+        );
+      }
+    } else if (spouseName) {
+      newEsAdlari = newEsAdlari.filter((name) => name !== spouseName);
+    }
+
+    const updatedPerson = {
+      ...selectedPerson,
+      esIds: newEsIds,
+      esAdlari: newEsAdlari,
+    };
+
+    try {
+      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+      setPeople((prev) =>
+        prev.map((p) => (p.id === selectedId ? updatedPerson : p))
+      );
+      setSelectedMember(updatedPerson);
+    } catch (error) {
+      console.error('Eş silme hatası:', error);
+      alert('❌ Eş silinemedi!');
+    }
+  };
+
+  // ============================================================
+  // FOTOĞRAF YÜKLE
   // ============================================================
   const handlePhotoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !selectedId || !selectedPerson) return;
 
-    // Dosya boyutu kontrolü (max 5 MB)
     if (file.size > 5 * 1024 * 1024) {
       alert('❌ Fotoğraf 5 MB\'dan küçük olmalı!');
       e.target.value = '';
       return;
     }
 
-    // Dosya tipi kontrolü
     if (!file.type.startsWith('image/')) {
       alert('❌ Lütfen bir fotoğraf seçin!');
       e.target.value = '';
@@ -544,24 +785,18 @@ function App() {
     setUploadingPhoto(true);
 
     try {
-      // Fotoğrafı küçült ve base64'e çevir (400x400, kalite %70)
       const base64 = await resizeImageToBase64(file, 400, 400, 0.7);
 
-      // Boyut kontrolü (Firestore doküman limiti 1 MB)
       if (base64.length > 1000000) {
-        alert(
-          '❌ Fotoğraf çok büyük! Lütfen daha küçük bir fotoğraf seçin.'
-        );
+        alert('❌ Fotoğraf çok büyük!');
         setUploadingPhoto(false);
         e.target.value = '';
         return;
       }
 
-      // Firestore'a kaydet
       const updatedPerson = { ...selectedPerson, photoUrl: base64 };
       await setDoc(doc(db, 'people', selectedId), updatedPerson);
 
-      // State'i güncelle
       setPeople((prev) =>
         prev.map((p) =>
           p.id === selectedId ? { ...p, photoUrl: base64 } : p
@@ -581,12 +816,8 @@ function App() {
     }
   };
 
-  // ============================================================
-  // FOTOĞRAF SİL
-  // ============================================================
   const handlePhotoDelete = async () => {
     if (!selectedPerson?.photoUrl || !selectedId) return;
-
     if (!confirm('Fotoğrafı silmek istediğinizden emin misiniz?')) return;
 
     try {
@@ -629,7 +860,8 @@ function App() {
       parentId: selectedPerson.id,
       soyadi: data.soyadi,
       anneAdi: '',
-      esAdi: '',
+      esIds: [],
+      esAdlari: [],
       dogumYili: data.dogumYili,
       olumYili: '',
       notlar: '',
@@ -671,7 +903,7 @@ function App() {
 
   const handleBackup = () => {
     const exportData = {
-      version: '2.0',
+      version: '2.1',
       exportDate: new Date().toISOString(),
       people: people,
     };
@@ -764,6 +996,21 @@ function App() {
     );
   };
 
+  const getSpouses = (person: Person) => {
+    const spouses: { id?: string; name: string }[] = [];
+
+    (person.esIds || []).forEach((id) => {
+      const spouse = people.find((p) => p.id === id);
+      if (spouse) spouses.push({ id, name: spouse.name });
+    });
+
+    (person.esAdlari || []).forEach((name) => {
+      spouses.push({ name });
+    });
+
+    return spouses;
+  };
+
   if (loading) {
     return (
       <div className="app-container">
@@ -842,56 +1089,65 @@ function App() {
 
       {selectedPerson && (
         <div className="person-card">
+          {/* ÜST: FOTOĞRAF + İSİM + KAPAT */}
           <div className="person-card-header">
-          <div className="photo-container">
-  {/* Fotoğraf varsa göster, yoksa placeholder */}
-  {selectedPerson.photoUrl ? (
-    <div className="photo-wrapper">
-      <img
-        src={selectedPerson.photoUrl}
-        alt={selectedPerson.name}
-        className="person-photo"
-        onClick={() => {
-          document.getElementById('photo-upload-input')?.click();
-        }}
-      />
-      <button
-        type="button"
-        className="photo-delete-btn"
-        onClick={(e) => {
-          e.stopPropagation();
-          handlePhotoDelete();
-        }}
-        title="Fotoğrafı sil"
-      >
-        ✕
-      </button>
-    </div>
-  ) : (
-    <div
-      className="photo-placeholder"
-      onClick={() => {
-        document.getElementById('photo-upload-input')?.click();
-      }}
-      style={{
-        opacity: uploadingPhoto ? 0.5 : 1,
-        cursor: uploadingPhoto ? 'wait' : 'pointer',
-      }}
-    >
-      <span>{uploadingPhoto ? '⏳' : '📷'}</span>
-      <small>{uploadingPhoto ? 'Yükleniyor...' : 'Fotoğraf Ekle'}</small>
-    </div>
-  )}
+            <div className="photo-container">
+              {selectedPerson.photoUrl ? (
+                <div className="photo-wrapper">
+                  <img
+                    src={selectedPerson.photoUrl}
+                    alt={selectedPerson.name}
+                    className="person-photo"
+                    onClick={() => {
+                      document.getElementById('photo-upload-input')?.click();
+                    }}
+                  />
+                  <button
+                    type="button"
+                    className="photo-delete-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handlePhotoDelete();
+                    }}
+                    title="Fotoğrafı sil"
+                  >
+                    ✕
+                  </button>
+                </div>
+              ) : (
+                <div
+                  className="photo-placeholder"
+                  onClick={() => {
+                    document.getElementById('photo-upload-input')?.click();
+                  }}
+                  style={{
+                    opacity: uploadingPhoto ? 0.5 : 1,
+                    cursor: uploadingPhoto ? 'wait' : 'pointer',
+                  }}
+                >
+                  <span>{uploadingPhoto ? '⏳' : '📷'}</span>
+                  <small>
+                    {uploadingPhoto ? 'Yükleniyor...' : 'Fotoğraf Ekle'}
+                  </small>
+                </div>
+              )}
+              <input
+                id="photo-upload-input"
+                type="file"
+                accept="image/*"
+                onChange={handlePhotoUpload}
+                style={{ display: 'none' }}
+              />
+            </div>
 
-  {/* INPUT HER ZAMAN RENDER EDİLİR (gizli) */}
-  <input
-    id="photo-upload-input"
-    type="file"
-    accept="image/*"
-    onChange={handlePhotoUpload}
-    style={{ display: 'none' }}
-  />
-</div>
+            {/* İSİM FOTOĞRAFIN YANINDA */}
+            <div className="person-name-container">
+              <h2 className="person-name">{selectedPerson.name}</h2>
+              {selectedPerson.soyadi && (
+                <p className="person-surname">{selectedPerson.soyadi}</p>
+              )}
+            </div>
+
             <button
               className="close-button"
               onClick={() => setSelectedMember(null)}
@@ -900,12 +1156,29 @@ function App() {
             </button>
           </div>
 
-          <h2 className="person-name">{selectedPerson.name}</h2>
-
           <div className="card-section">
             <div className="section-title">📜 SİLSİLE</div>
             <div className="lineage-text">
-              {lineage.length > 0 ? lineage.join(' › ') : 'Silsile yok'}
+              {lineage.length > 0 ? (
+                lineage.map((ancestor, index) => (
+                  <React.Fragment key={ancestor.id}>
+                    <span
+                      style={{ cursor: 'pointer', textDecoration: 'underline' }}
+                      onClick={() => {
+                        const clickedPerson = people.find(
+                          (p) => p.id === ancestor.id
+                        );
+                        if (clickedPerson) setSelectedMember(clickedPerson);
+                      }}
+                    >
+                      {ancestor.name}
+                    </span>
+                    {index < lineage.length - 1 && ' › '}
+                  </React.Fragment>
+                ))
+              ) : (
+                'Silsile yok'
+              )}
             </div>
           </div>
 
@@ -930,9 +1203,21 @@ function App() {
               </div>
               <div className="info-row">
                 <span className="info-label">Baba Adı:</span>
-                <span className="info-value auto">
-                  {babaAdi || 'Bilinmiyor'}
-                </span>
+                {baba ? (
+                  <span
+                    className="info-value"
+                    style={{
+                      cursor: 'pointer',
+                      textDecoration: 'underline',
+                      color: '#00695C',
+                    }}
+                    onClick={() => setSelectedMember(baba)}
+                  >
+                    {baba.name}
+                  </span>
+                ) : (
+                  <span className="info-value auto">Bilinmiyor</span>
+                )}
               </div>
               <div className="info-row">
                 <span className="info-label">Anne Adı:</span>
@@ -940,14 +1225,6 @@ function App() {
                   value={selectedPerson.anneAdi}
                   placeholder="Anne adı ekle..."
                   onSave={(v) => updatePerson('anneAdi', v)}
-                />
-              </div>
-              <div className="info-row">
-                <span className="info-label">Eşi:</span>
-                <EditableField
-                  value={selectedPerson.esAdi}
-                  placeholder="Eş ekle..."
-                  onSave={(v) => updatePerson('esAdi', v)}
                 />
               </div>
               <div className="info-row">
@@ -969,6 +1246,73 @@ function App() {
             </div>
           </div>
 
+          {/* EŞLERİ */}
+          <div className="card-section">
+            <div className="section-title">💍 EŞLERİ</div>
+            {(() => {
+              const spouses = getSpouses(selectedPerson);
+              return spouses.length > 0 ? (
+                <div className="children-list">
+                  {spouses.map((spouse, index) => (
+                    <span
+                      key={spouse.id || `name-${index}`}
+                      className="child-chip"
+                      style={{
+                        cursor: spouse.id ? 'pointer' : 'default',
+                        backgroundColor: spouse.id ? '#F8BBD0' : '#E0E0E0',
+                        color: spouse.id ? '#AD1457' : '#666',
+                        position: 'relative',
+                        paddingRight: '24px',
+                      }}
+                      onClick={() => {
+                        if (spouse.id) {
+                          const foundPerson = people.find(
+                            (p) => p.id === spouse.id
+                          );
+                          if (foundPerson) setSelectedMember(foundPerson);
+                        }
+                      }}
+                    >
+                      💍 {spouse.name}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleRemoveSpouse(spouse.id, spouse.name);
+                        }}
+                        style={{
+                          position: 'absolute',
+                          right: '4px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          background: '#C62828',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '50%',
+                          width: '16px',
+                          height: '16px',
+                          fontSize: '10px',
+                          cursor: 'pointer',
+                          padding: 0,
+                        }}
+                        title="Eşi sil"
+                      >
+                        ✕
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="empty-text">Eş bilgisi yok</div>
+              );
+            })()}
+            <button
+              className="add-button"
+              onClick={() => setShowAddSpouseForm(true)}
+            >
+              + Eş Ekle
+            </button>
+          </div>
+
           <div className="card-section">
             <div className="section-title">👶 ÇOCUKLARI</div>
             {(() => {
@@ -983,6 +1327,10 @@ function App() {
                       className={`child-chip ${
                         child.gender === 'female' ? 'female' : 'male'
                       }`}
+                      onClick={() => {
+                        setSelectedMember(child);
+                      }}
+                      style={{ cursor: 'pointer' }}
                     >
                       {child.gender === 'female' ? '👩' : '👨'} {child.name}
                     </span>
@@ -1025,6 +1373,16 @@ function App() {
           parentName={selectedPerson.name}
           onAdd={handleAddChild}
           onCancel={() => setShowAddForm(false)}
+        />
+      )}
+
+      {showAddSpouseForm && selectedPerson && (
+        <AddSpouseForm
+          personName={selectedPerson.name}
+          allPeople={people}
+          currentPerson={selectedPerson}
+          onAdd={handleAddSpouse}
+          onCancel={() => setShowAddSpouseForm(false)}
         />
       )}
 
