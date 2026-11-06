@@ -866,3 +866,82 @@
      color: #999;
      font-size: 11px;
    }
+   /* Anne düzenleme butonu için */
+.info-row > div {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}/* ============================================
+   ARAMA SONUÇLARI AÇILIR LİSTESİ
+   ============================================ */
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 4px;
+  min-width: 250px;
+}
+
+.search-result-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #E0F2F1;
+}
+
+.search-result-name {
+  font-weight: 600;
+  color: #00695C;
+  font-size: 14px;
+}
+
+.search-result-lineage {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.search-no-results {
+  padding: 12px;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  font-style: italic;
+}
+/* ============================================
+   KİŞİ ID GÖSTERİMİ
+   ============================================ */
+   .person-id-display {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px dashed #ddd;
+    font-size: 10px;
+    color: #aaa;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+    user-select: text;
+    word-break: break-all;
+    cursor: text;
+  }
