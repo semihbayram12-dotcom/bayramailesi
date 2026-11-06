@@ -117,7 +117,12 @@ function buildTreeFromPeople(people: Person[]): any {
   let root = null;
   people.forEach((p) => {
     if (p.parentId && map[p.parentId]) {
-      map[p.parentId].children.push(map[p.id]);
+      const parent = map[p.parentId];
+      // SADECE EBEVEYN ERKEKSE çocuğu ağaca ekle
+      if (parent.gender === 'male') {
+        parent.children.push(map[p.id]);
+      }
+      // Ebeveyn kızsa, çocuğu ağaca EKLEME
     } else if (!p.parentId) {
       root = map[p.id];
     }
