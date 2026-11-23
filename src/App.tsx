@@ -11,6 +11,8 @@ import {
   setDoc,
   getDocs,
   writeBatch,
+  updateDoc,     // EKLE
+  deleteField,   // EKLE (fotoğraf/not silmek için gerekli)
 } from 'firebase/firestore';
 
 // ============================================================
@@ -792,24 +794,27 @@ function App() {
     ? findAllDescendants(people, selectedPerson.id)
     : [];
 
-  const updatePerson = async (field: keyof Person, value: any) => {
-    if (!selectedId || !selectedPerson) return;
-
-    const updatedPerson = { ...selectedPerson, [field]: value };
-
-    try {
-      await setDoc(doc(db, 'people', selectedId), updatedPerson);
-      setPeople((prev) =>
-        prev.map((p) => (p.id === selectedId ? updatedPerson : p))
-      );
-      setSelectedMember((prev: any) =>
-        prev ? { ...prev, [field]: value } : null
-      );
-    } catch (error) {
-      console.error('Firestore güncelleme hatası:', error);
-      alert('❌ Kaydetme başarısız!');
-    }
-  };
+    const updatePerson = async (field: keyof Person, value: any) => {
+      if (!selectedId || !selectedPerson) return;
+  
+      try {
+        // setDoc yerine updateDoc kullanıyoruz. Sadece ilgili alan güncellenir.
+        await updateDoc(doc(db, 'people', selectedId), {
+          [field]: value
+        });
+        
+        // Yerel state'i güncelle (arayüzün anında yansıması için)
+        setPeople((prev) =>
+          prev.map((p) => (p.id === selectedId ? { ...p, [field]: value } : p))
+        );
+        setSelectedMember((prev: any) =>
+          prev ? { ...prev, [field]: value } : null
+        );
+      } catch (error) {
+        console.error('Firestore güncelleme hatası:', error);
+        alert('❌ Kaydetme başarısız!');
+      }
+    };
 
   // ============================================================
   // ANNE EKLE / DÜZENLE
@@ -849,17 +854,22 @@ function App() {
   // ============================================================
   const handleRemoveMother = async () => {
     if (!selectedPerson) return;
-    if (!confirm('Anne bilgisini silmek istediğinizden emin misiniz?'))
-      return;
-
-    const updatedPerson = { ...selectedPerson, anneId: '', anneAdi: '' };
+    if (!confirm('Anne bilgisini silmek istediğinizden emin misiniz?')) return;
 
     try {
-      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+      await updateDoc(doc(db, 'people', selectedId), {
+        anneId: '',
+        anneAdi: ''
+      });
+
       setPeople((prev) =>
-        prev.map((p) => (p.id === selectedId ? updatedPerson : p))
+        prev.map((p) =>
+          p.id === selectedId ? { ...p, anneId: '', anneAdi: '' } : p
+        )
       );
-      setSelectedMember(updatedPerson);
+      setSelectedMember((prev: any) =>
+        prev ? { ...prev, anneId: '', anneAdi: '' } : null
+      );
     } catch (error) {
       console.error('Anne silme hatası:', error);
       alert('❌ Anne bilgisi silinemedi!');
@@ -1037,9 +1047,10 @@ function App() {
     if (!confirm('Fotoğrafı silmek istediğinizden emin misiniz?')) return;
 
     try {
-      const updatedPerson = { ...selectedPerson };
-      delete updatedPerson.photoUrl;
-      await setDoc(doc(db, 'people', selectedId), updatedPerson);
+      // Firestore'dan alanı silmek için deleteField() kullanılır
+      await updateDoc(doc(db, 'people', selectedId), {
+        photoUrl: deleteField()
+      });
 
       setPeople((prev) =>
         prev.map((p) =>
